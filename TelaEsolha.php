@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
+    <link rel="stylesheet" href="styleTelaEscolha.css">
     <img src="Images/logo.png" alt="">
 </head> 
 <body>
