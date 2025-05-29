@@ -1,0 +1,45 @@
+body{
+    background-color: #1D3557;
+}
+
+.container {
+    position: relative; 
+    width: 20cm;
+    height: 20cm;
+  }
+  
+  .quadrado {
+    position: absolute;
+  }
+  
+
+  .fundo {
+    background-color:  #76A8C1;
+    top: 3cm;
+    left: 11cm;
+    width: 20cm;
+    height: 13cm;
+    z-index: 1;
+    border-radius: 10%;
+  }
+  
+  .frente {
+    background-color:white;
+    top: 3cm;
+    left: 11cm;
+    width: 10cm;
+    height: 13cm;
+    z-index: 2;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .logo{
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    width: 10cm;
+    height: 10cm;
+    z-index: 3; 
+ }
+  
