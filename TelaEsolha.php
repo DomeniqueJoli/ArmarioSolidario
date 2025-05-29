@@ -7,6 +7,8 @@
     <img src="Images/logo.png" alt="">
 </head> 
 <body>
-    
+    <h1>Armário Solidário</h1>
+    <button>Doador</button>
+    <button>Instituição</button>
 </body>
 </html>
