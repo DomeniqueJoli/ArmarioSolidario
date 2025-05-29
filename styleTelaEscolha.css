@@ -11,10 +11,12 @@ h1{
 button{
     text-align: center;
     margin: 3%;
-    width: 10cm;
+    width: 15cm;
     height: 10cm;
     border-radius: 10%;
     font-size: 40px;
     font-family: 'Times New Roman';
+    background-color: #BB2825;
+    border-color: #BB2825;
 }
 
