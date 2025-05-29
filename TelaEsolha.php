@@ -10,8 +10,11 @@
 </head> 
 
 <body>
-<img src="Images/logo.png" alt=""> 
-<h1>Armário Solidário</h1>
+
+<div class="titulo">
+    <h1>Armário Solidário</h1>
+    <img src="Images/logo.png" alt=""> 
+</div>
 
 <div style="text-align: center;">
     <button>Doador</button>
