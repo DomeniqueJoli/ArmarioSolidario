@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
     <link rel="stylesheet" href="styleLogin.css">
-    <link rel="icon" href="Images/Captura_de_tela_2025-05-28_202248-removebg-preview (1).png" type="image/png">
+    <link rel="icon" href="Images/logo.png" type="image/png">
 </head>
 <body>
 
