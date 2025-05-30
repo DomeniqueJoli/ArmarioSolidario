@@ -23,8 +23,7 @@
     E-mail: <input type="email" name="emailDoador" required><br>
     Senha: <input type="password" name="senhaDoador" required> Confirmar senha: <input type="password" name="senhaDoador" required><br><br>
     
-    </form>
-    
+    </form> 
     
     
 </body>
