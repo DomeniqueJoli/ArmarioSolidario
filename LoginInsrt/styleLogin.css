@@ -1,0 +1,88 @@
+body{
+    background-color: #1D3557;
+}
+
+.container {
+    position: relative; 
+    width: 20cm;
+    height: 20cm;
+  }
+  
+  .quadrado {
+    position: absolute;
+  }
+  
+
+  .fundo {
+    background-color: white;
+    top: 3cm;
+    left: 11cm;
+    width: 20cm;
+    height: 13cm;
+    z-index: 1;
+    border-radius: 10%;
+  }
+  
+  .frente {
+    background-color: #76A8C1;
+    top: 3cm;
+    left: 11cm;
+    width: 10cm;
+    height: 13cm;
+    z-index: 2;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .logo{
+    position: absolute;
+    top: 200px;
+    left: 22cm;
+    width: 315px;
+    height: 305px;
+    z-index: 3; 
+ }
+
+ .form{
+  position: absolute;
+  border-radius: 15%;
+  top: 260px;
+  left: 12cm;
+  z-index: 4; 
+ }
+
+ .tt{
+  font-family: sans-serif;
+  color: white;
+  }
+
+ .ent{
+ background-color: white;
+ border-style: none;
+ border-radius: 15px;
+ width: 299px;
+ height: 35px;
+ margin-bottom: 10%;
+ }
+
+ .Sen {
+  margin-bottom: 20cm;
+  text-decoration: none;
+ }
+
+ 
+ .bt{
+  width: 150px;
+  height: 38px;
+  font-size: 15px;
+  background-color: white;
+  color: #1D3557;
+  border-color: #1D3557;
+  border-radius: 30px;
+  margin-top: 5%;
+  margin-left: 25%;
+ }
+
+ a{
+  margin-top: 10px;
+ }
