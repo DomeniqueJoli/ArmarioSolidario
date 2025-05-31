@@ -1,62 +1,94 @@
-.logo{
-margin-top: 1%;
- width: 130px;
- height: 93px;
+.topnav {
+  width: 1330px;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 60px; 
 }
 
-.topnav {
-    width: 1330px;
-    height: 190px;
-    margin-top: 0px;
+.logo {
+  width: 110px;
+  height: 93px;
+  margin-top: 0;
 }
 
 a {
-    color: #1D3557;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    margin-left: 5%;
-    display: inline-block; 
-    padding: 10px; 
+  color: #1D3557;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px; 
+  display: inline-block; 
+  white-space: nowrap; 
 }
-  
-  a:hover {
-    width: 4cm;
-    height: 0,9cm;
-    background-color: #a8cfe2;
-    border-radius: 10px;
-    transition: background-color 0.4s, color 0.3s;
+
+a:not(:last-child) {
+  margin-right: 35px; 
+}
+
+a {
+  color: #1D3557;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  display: inline-block; 
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #a8cfe2;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: #457b9d;
+  transform: scale(1.05); 
+}
+
+
+h6 {
+  font-size: 40px;
+  margin-left: 35%;
+  margin-top: 16%;
+}
+
+h1 {
+  font-size: 70px;
+  margin-left: 35%;
+  margin-top: 1%;
+}
+
+h3 {
+  font-size: 35px;
+  margin-top: 17%;
+  margin-left: 2%;
+  color: #1D3557;
+}
+
+p {
+  margin-left: 2%;
 }
 
 body {
-    background-image: url("Images/fundoHome.png");
-    background-repeat: no-repeat;
-    background-position: 0px 150px;  
-    background-size: 1409px 590px;  
-    background-attachment: center;
-    height: 500vh;         
-    width: 100vw;
-  }
-  
-  h6{
-    font-size: 40px;
-    margin-left: 30%;
-    margin-top: 10%;
-  }
-
-  h1{
-    font-size: 70px;
-    margin-left: 29%;
-    margin-top: 3%;
-  }
-
-  h3{
-    font-size: 35px;
-    margin-top: 20%;
-    margin-left: 2%;
-    color: #a8cfe2;
-  }
-
-  p{
- margin-left: 2%;
-  }
+  background-image: url("Images/fundoHome.png");
+  background-repeat: no-repeat;
+  background-position: 0px 150px;  
+  background-size: 1409px 590px;  
+  background-attachment: center;
+  height: 150vh;         
+  width: 100vw;
+}
