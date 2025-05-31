@@ -1,0 +1,25 @@
+.logo{
+margin-top: 1%;
+ width: 130px;
+ height: 93px;
+}
+
+.topnav {
+    width: 1330px;
+    height: 190px;
+    margin-top: 0px;
+}
+
+a{
+color: #1D3557;
+text-decoration: none;
+font-size: 20px;
+margin-left: 7%;
+}
+
+a:hover{
+    width: 3cm;
+    height: 2cm;
+    background-color: #76A8C1;
+    border-radius: 10px;
+}

@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ArmárioSolidário</title>
+    <link rel="icon" href="Images/Captura_de_tela_2025-05-28_202248-removebg-preview (1).png" type="image/png">
+    <link rel="stylesheet" href="styleHomeInst.css">
 </head>
 <body>
-    <a href="LoginInsrt\Login.php">Login</a>
-    <a href="TelaEsolha.php">Tela Escolha</a>
-    <a href="RecuperarSenha\RecupSenha">Recup Senha</a>
-    <a href="Instituicao\Alterar.php">Alt Inst</a>
-    <a href="Instituicao\Cadastro.php">Cads Inst</a>
-    <a href="Instituicao\Excluir.php">Exc Inst</a>
-    <a href="Instituicao\Listar.php">List inst</a>
-    <a href="Instituicao\Perfil.php">Perfil inst</a>
+ 
+
+<div class="topnav">    
+<img src="Images/logo.png" alt="" class="logo"> 
+
+    <a href="HomeInst.php">Home</a>    
+    <a href="Peça\Listar.php">Adicionar Peça</a>
+    <a href="Doador\Listar.php">Doadores</a>
+    <a href="Instituicao\Listar.php">Instituições</a>
+    <a href="Açao\Listar.php">Ações Criadas</a>
+    <a href="Instituicao\Perfil.php">Perfil</a>
+</div>
+
 </body>
 </html>

@@ -13,7 +13,7 @@
 
 <div class="titulo">
     <h1>Armário Solidário</h1>
-    <img src="Images/logo.png" alt="" clas="logo"> 
+    <img src="Images/logo.png" alt="" class="logo"> 
 </div>
 
 <div style="text-align: center;">
