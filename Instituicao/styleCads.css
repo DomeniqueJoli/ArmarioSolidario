@@ -5,28 +5,28 @@
     display: flex;
     align-items: center; 
     gap: 10px; 
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
 
-  .titulo img{
+.titulo img{
     width: 115px;
     height: 105px;
 }
 
-.titulo h1{
-    font-size: 40px;
-    font-family: sans-serif;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
     padding: 40px;
   }
 
   form {
-    max-width: 900px;
+    max-width: 960px;
     margin: auto;
+    background-color: #ffffff;
+    padding: 40px 50px;
+    border-radius: 16px;
+    box-shadow: 0 6px 100px rgba(0, 0, 0, 0.1);
   }
 
   .form-grid {
@@ -67,7 +67,7 @@ body {
     background-color: #76A8C1;
     color: white;
   }
-
+  
   textarea {
     resize: vertical;
     height: 100px;
@@ -104,9 +104,17 @@ body {
     color: white;
     border: none;
     border-radius: 8px;
-    padding: 12px 24px;
+    padding: 12px 64px;
     font-size: 16px;
     cursor: pointer;
     display: block;
     margin: 40px auto 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
   }
+  
+  button:hover {
+    background-color: #B6312C;
+    transform: scale(1.05);
+  }
+  
