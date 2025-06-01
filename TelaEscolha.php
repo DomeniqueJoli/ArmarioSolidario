@@ -18,8 +18,8 @@
     <p class="subtexto">Escolha como deseja entrar:</p>
 
     <div class="botoes">
-      <button class="btn">Sou Doador</button>
-      <button class="btn">Sou Instituição</button>
+      <button class="btn" onclick="location.href='Doador/Cadastro.php'">Sou Doador</button>
+      <button class="btn" onclick="location.href='Instituicao/Cadastro.php'">Sou Instituição</button>
     </div>
   </div>
 

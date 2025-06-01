@@ -90,7 +90,7 @@
       </div>
     </div>
 
-    <button type="submit">Salvar Cadastro</button>
+    <button type="submit" >Salvar Cadastro</button>
   </form>
 
 </body>
