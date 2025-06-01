@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armário Solidário</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="Images/logo.png" type="image/png" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="titulo">
+      <img src="Images/logo.png" alt="Logo do projeto" class="logo" />
+      <h1>Armário Solidário</h1>
+    </div>
+
+    <p class="subtexto">Escolha como deseja entrar:</p>
+
+    <div class="botoes">
+      <button class="btn">Sou Doador</button>
+      <button class="btn">Sou Instituição</button>
+    </div>
+  </div>
+
+</body>
+</html>
