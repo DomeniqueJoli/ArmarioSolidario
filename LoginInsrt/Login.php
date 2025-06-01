@@ -24,7 +24,7 @@
 <br>
     <input class="ent" type="text">
 <br>
-    <a class="Sen" href="../RecuperarSenha/RecupSenha">Esqueci minha senha</a>
+ <a class="Sen" href="..\RecuperarSenha\RecupSenha.php">Esqueci minha senha</a>
 <br>
     <button class="bt" >Entrar</button>
     </div>

@@ -1,0 +1,92 @@
+body{
+    background-color: #1D3557;
+}
+
+.container {
+    position: relative; 
+    width: 20cm;
+    height: 20cm;
+    display: flex;
+   flex-direction: column;
+  }
+  
+  .quadrado {
+    position: absolute;
+  }
+  
+
+  .fundo {
+    background-color: white;
+    top: 3cm;
+    left: 9cm;
+    width: 20cm;
+    height: 13cm;
+    z-index: 1;
+    border-radius: 10%;
+  }
+  
+  .frente {
+    background-color: #76A8C1;
+    top: 3cm;
+    left: 9cm;
+    width: 10cm;
+    height: 13cm;
+    z-index: 2;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+  }
+
+  .logo{
+    position: absolute;
+    top: 200px;
+    left: 20cm;
+    width: 315px;
+    height: 305px;
+    z-index: 3; 
+ }
+
+ .form{
+  position: absolute;
+  border-radius: 15%;
+  top: 260px;
+  left: 10cm;
+  z-index: 4; 
+  gap: 4px;
+ }
+
+ .tt{
+  font-family: sans-serif;
+  color: white;
+  }
+
+ .ent{
+ background-color: white;
+ border-style: none;
+ border-radius: 15px;
+ width: 299px;
+ height: 35px;
+ margin-bottom: 10%;
+ }
+
+ .Sen {
+  text-decoration: none;
+
+ }
+
+ 
+ .bt{
+  width: 150px;
+  height: 38px;
+  font-size: 15px;
+  background-color: white;
+  color: #1D3557;
+  border-color: #1D3557;
+  border-radius: 30px;
+  margin-top: 5%;
+  margin-left: 23%;
+ }
+
+ a{
+  margin-top: 10px;
+  color: #1D3557;
+ }
