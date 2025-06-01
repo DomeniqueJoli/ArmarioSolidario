@@ -1,29 +1,97 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro do DOador</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro Instituição</title>
+  <link rel="icon" href="../Images/logo.png" type="image/png" />
+  <link rel="stylesheet" href="styleCadastroDoador.css">
+
 </head>
 <body>
-    <form action="">
-    Nome completo: <input type="text" name="nomeDoador" class="nomeD" required><br>
-    CPF: <input type="text" name="cpfDoador" class="cpfD" required><br>
-    Descrição: <input type="text" name="bioDoador" class="bioD" required><br>
-    Data de Nascimento: <input type="date" name="dataDoador" class="dataND" required><br>
-    Contato: <input type="text" name="contatoDoador" class="contatoD" required><br>
-    CEP: <input type="text" name="cepDoador" class="cepD" required><br>
-    Estado: <input type="text" name="estadoDoador" class="estadoD" required><br>
-    Cidade: <input type="text" name="cidadeDoador" class="cidadeD" required><br>
-    Bairro: <input type="text" name="bairroDoador" required><br>
-    Rua: <input type="text" name="ruaDoador" class="ruaD" required><br>
-    Número: <input type="number" name="numlocalDoador" class="numD" required><br>
-    E-mail: <input type="email" name="emailDoador" class="emailD" required><br>
-    Senha: <input type="password" name="senhaDoador" class="senhaD"required> 
-    Confirmar senha: <input type="password" name="senhaDoador" class="confirm_senhaD" required><br><br>
-    dhsdi: <input type="button" class="jk">
-    </form> 
-    
-    
+
+<div class="titulo">
+    <h1>Cadastro de Doadores</h1>
+      <img src="..\Images/logo.png" alt="" class="logo"> 
+</div>
+
+  <form>
+    <div class="top-section">
+      <div class="foto-instituicao">Foto do Doador</div>
+      <div class="dados-basicos">
+        <div>
+          <label>Nome completo</label>
+          <input type="text" name="nomeInst" required />
+        </div>
+        <div>
+          <label>CPF</label>
+          <input type="text" name="cnpjInst" required />
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Biografia</label>
+      <textarea name="bioDoa" required></textarea>
+    </div>
+
+    <div class="form-grid">
+      <div class="form-half">
+        <label>Data de nascimento</label>
+        <input type="date" name="DataNasc" required />
+      </div>
+
+       <div class="form-third">
+        <label>CEP</label>
+        <input type="text" name="cepDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Estado</label>
+        <input type="text" name="estadoDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Cidade</label>
+        <input type="text" name="cidadeDoa" required />
+      </div>
+
+      <div class="form-third">
+        <label>Bairro</label>
+        <input type="text" name="bairroDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Rua</label>
+        <input type="text" name="ruaDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Número</label>
+        <input type="number" name="numlocalDoa" required />
+      </div>
+
+      <div class="form-third">
+        <label>Telefone</label>
+        <input type="text" name="contatoDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Email</label>
+        <input type="email" name="emailDoa" required />
+      </div>
+      <div class="form-third">
+        <label>Site / Rede social</label>
+        <input type="text" name="siteDoa" />
+      </div>
+
+      <div class="form-half">
+        <label>Senha</label>
+        <input type="password" name="senhaDoa" required />
+      </div>
+      <div class="form-half">
+        <label>Confirme sua senha</label>
+        <input type="password" name="senhaDoaConfirmar" required />
+      </div>
+    </div>
+
+    <button type="submit">Salvar Cadastro</button>
+  </form>
+
 </body>
 </html>
