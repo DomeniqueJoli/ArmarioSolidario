@@ -1,0 +1,247 @@
+  body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      text-align: center;
+      margin-top: 0px;
+    }
+
+  .form-container
+  {
+      max-width: 100%;
+      margin: 20px;
+      
+  }
+
+  .foto-e-descricao
+  {
+      display: flex;
+      gap: 100px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 50px;
+  }
+
+    .foto-peca {
+      width: 160px;
+      height: 160px;
+      background-color: #1d3557;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .descricao {
+      flex: 1;
+      height: 60px;
+      width: 620px;
+      color: #fff;
+      border-color: #fff;
+      border: none;
+      background-color: #457B9D;
+      border-radius: 8px;
+    }
+    .descricaoL
+    {
+      color: #1d3557;
+      display: block;
+      position: absolute; 
+    }
+
+    .form-row 
+    {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 40px;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+   
+    .tipo
+    {
+      width: 360px;
+      height: 25px;
+      background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.tipoL{
+      color:  #1d3557;
+      display: block;
+    }
+    
+    .estado
+    {
+      width: 310px;
+      height: 25px;
+      background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.estadoL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .tamanho
+    {
+      width: 200px;
+      height: 25px;
+      background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.tamanhoL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .data
+    {
+      width: 215px;
+      height: 25px;
+      background-color: #457B9D;
+      color: #fff;
+      border-radius: 10px;
+      border-color: #fff;
+      border: none;
+    }.dataL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .genero
+    {
+      width: 215px;
+      height: 25px;
+       background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.generoL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .etaria
+    {
+      width: 215px;
+      height: 25px;
+       background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.etariaL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .tempo
+    {
+      width: 215px;
+      height: 25px;
+       background-color: #457B9D;
+      border-radius: 10px;
+      border-color: #fff;
+      color: #fff;
+      border: none;
+    }.tempoL{
+      color: #1d3557;
+      display: block;
+    }
+
+    .form-row2
+    {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    
+
+    button {
+      margin-top: 30px;
+      background-color: #104f6e;
+      color: #fff;
+      border: none;
+      padding: 12px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0c3a51;
+    } 
+
+    .topnav{
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 20px; 
+  }
+  
+  .logo {
+    width: 110px;
+    height: 93px;
+    margin-top: 0;
+  }
+  
+  a {
+    color: #1D3557;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px; 
+    display: inline-block; 
+    white-space: nowrap; 
+  }
+  
+  a:not(:last-child) {
+    margin-right: 35px; 
+  }
+  
+  a {
+    color: #1D3557;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 9px 15px;
+    display: inline-block; 
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #a8cfe2;
+    transition: width 0.3s ease;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+  
+  a:hover {
+    color: #457b9d;
+    transform: scale(1.05); 
+  }
+
+    
