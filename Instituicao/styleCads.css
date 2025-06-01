@@ -109,8 +109,7 @@ body {
     cursor: pointer;
     display: block;
     margin: 40px auto 0;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease; 
   }
   
   button:hover {
