@@ -21,9 +21,9 @@
 
 </body>
 
-    <main>
-        <h1>Instituições Parceiras</h1>
-        <table>
+<main>
+    <h1>Instituições Parceiras</h1>
+    <table>
             <thead>
                 <tr>
                     <th>Logo</th>
@@ -37,26 +37,26 @@
                 </tr>
             </thead>
             <tbody>
-  <tr>
-    <td><input type="file" class="inst-img-input"></td>
-    <td><input type="text" class="input"></td>
-    <td><input type="text" class="input"></td>
-    <td><input type="text" class="input"></td>
-    <td><input type="text" class="input"></td>
-    <td><input type="text" class="input"></td>
-    <td><input type="text" class="input"></td>
-    <td></td>
-  </tr>
-  <tr class="btn-row">
-    <td colspan="8" style="text-align: center;">
-      <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
-    </td>
-  </tr>
+                <tr>
+                    <td><input type="file" class="inst-img-input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td><input type="text" class="input"></td>
+                    <td></td>
+                </tr>
+                <tr class="btn-row">
 
-</tbody>
+                <td colspan="8" style="text-align: center;">
+                    <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
+                </td>
+                </tr>
 
-        </table>
-    </main>
+            </tbody>
 
+    </table>
+</main>
 </body>
 </html>

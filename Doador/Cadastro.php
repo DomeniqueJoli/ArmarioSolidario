@@ -5,14 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro Instituição</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="styleCads.css">
+  <link rel="stylesheet" href="st.css">
 
 </head>
 <body>
 
 <div class="titulo">
     <h1>Cadastro de Doadores</h1>
-      <img src="..\Images/logo.png" alt="" class="logo"> 
+      <img src="..\Images\logo.png" alt="" class="logo"> 
 </div>
 
   <form>
