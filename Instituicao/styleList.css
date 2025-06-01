@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
+}
+
+.topnav {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    gap: 60px;
+}
+
+.logo {
+    width: 110px;
+    height: 93px;
+}
+
+.topnav a {
+    color: #B6312C;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.topnav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background-color: #e85f5b;
+    transition: width 0.3s ease;
+}
+
+.topnav a:hover::after {
+    width: 100%;
+}
+
+.topnav a:hover {
+    color: #c44540;
+    transform: scale(1.05);
+}
+
+main {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.input {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inst-img-input {
+    width: 100%;
+    padding: 6px;
+}
+
+.ver-mais {
+    background-color: #76A8C1;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 120px;
+}
+
+.ver-mais:hover {
+    background-color: #5e91aa;
+}
