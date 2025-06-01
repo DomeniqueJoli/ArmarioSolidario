@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 50px;
+  }
+  
+  .logo {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .titulo h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .botoes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .btn2 {
+    background-color: #BB2825;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 50px 70px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    min-width: 240px;
+  }
+  
+  .btn2:hover {
+    background-color: #a32320;
+    transform: scale(1.05);
+  }
+
+  .btn1 {
+    background-color: #1D3557;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 50px 70px;
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    min-width: 240px;
+  }
+  
+  .btn1:hover {
+    background-color: #172a45;
+    transform: scale(1.05);
+  }
+  

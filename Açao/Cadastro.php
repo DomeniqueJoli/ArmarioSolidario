@@ -3,14 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>ArmárioSolidário</title>
+    <link rel="icon" href="../Images/logo.png" type="image/png"></head>
+    <link rel="stylesheet" href="styleCads.css">
 <body>
+
+<div class="topnav">    
+<img src="../Images/logo.png" alt="" class="logo"> 
+    <a href="../HomeInst.php">Home</a>    
+    <a href="..\Açao\Cadastro.php">Adicionar Ação</a>
+    <a href="..\Doador\Listar.php">Doadores</a>
+    <a href="..\Instituicao\Listar.php">Instituições</a>
+    <a href="..\Açao\Listar.php">Ações Criadas</a>
+    <a href="..\Instituicao\Perfil.php">Perfil</a>
+</div>
+
     <form action="">
         <div>
         Nome completo: <input type="text" name="nomeDoador" required><br>
         CPF: <input type="text" name="cpfDoador" required><br>
-        Descrição: <input type="text" name="bioDoador" required><br><
+        Descrição: <input type="text" name="bioDoador" required><br>
     </div>
     
     Data de Nascimento: <input type="date" name="dataDoador" required><br>

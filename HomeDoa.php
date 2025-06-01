@@ -13,12 +13,12 @@
 <div class="topnav">    
 <img src="Images/logo.png" alt="" class="logo"> 
 
-    <a href="HomeInst.php">Home</a>    
-    <a href="Peça\Listar.php">Adicionar Ação</a>
+    <a href="HomeDoa.php">Home</a>    
+    <a href="Peça\Listar.php">Adicionar Peça</a>
     <a href="Doador\Listar.php">Doadores</a>
     <a href="Instituicao\Listar.php">Instituições</a>
-    <a href="Açao\Listar.php">Peças Criadas</a>
-    <a href="Instituicao\Perfil.php">Perfil</a>
+    <a href="Peça\Listar.php">Peças Criadas</a>
+    <a href="Doador\Perfil.php">Perfil</a>
 </div>
 
 <div class="">

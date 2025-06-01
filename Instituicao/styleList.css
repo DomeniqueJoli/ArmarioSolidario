@@ -62,48 +62,61 @@ a:hover {
   transform: scale(1.05); 
 }
 
-  
-  h6 {
-    font-size: 40px;
-    margin-left: 35%;
-    margin-top: 16%;
-  }
-  
-  h1 {
-    font-size: 70px;
-    margin-left: 35%;
-    margin-top: 1%;
-  }
-  
-h3 {
-        font-size: 35px;
-        margin-top: 18%;
-        margin-left: 0;
-        color: #B6312C;
-        text-align: center;
-        font-weight: 600;
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fff;
 }
-      
-p {
-        max-width: 1000px;
-        margin: 20px auto;
-        font-size: 18px;
-        line-height: 1.8;
-        color: #333;
-        text-align: justify;
-        background: rgba(255, 255, 255, 0.8); 
-        padding: 20px 30px;
-        border-radius: 12px;
-        box-shadow: 0px 0px 10px rgba(0,0,0,0.05);
-    }
   
-  body {
-    background-image: url("Images/fundoHome.png");
-    background-repeat: no-repeat;
-    background-position: 0px 150px;  
-    background-size: 1409px 590px;  
-    background-attachment: center;
-    height: 150vh;         
-    width: 100vw;
-  }
-  
+main {
+    padding: 40px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: center;
+    border-bottom: 2px solid #333;
+    padding: 12px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+td {
+    padding: 12px;
+    vertical-align: middle;
+}
+
+.input {
+    width: 100%;
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.inst-img-input {
+    width: 100%;
+    padding: 6px;
+}
+.ver-mais {
+    background-color: #76A8C1;
+    color: white;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%; /* ou 100% se quiser total */
+    font-size: 16px;
+    max-width: 600px; /* limite opcional para evitar exagero */
+}
