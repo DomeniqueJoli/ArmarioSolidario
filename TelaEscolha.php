@@ -15,11 +15,9 @@
       <h1>Armário Solidário</h1>
     </div>
 
-    <p class="subtexto">Escolha como deseja entrar:</p>
-
     <div class="botoes">
-      <button class="btn" onclick="location.href='Doador/Cadastro.php'">Sou Doador</button>
-      <button class="btn" onclick="location.href='Instituicao/Cadastro.php'">Sou Instituição</button>
+      <button class="btn1" onclick="location.href='Doador/Cadastro.php'">Sou Doador</button>
+      <button class="btn2" onclick="location.href='Instituicao/Cadastro.php'">Sou Instituição</button>
     </div>
   </div>
 
