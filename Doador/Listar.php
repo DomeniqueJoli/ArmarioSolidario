@@ -19,7 +19,7 @@
         </div>
 
     <main>
-        <h1>Lista de Doadores</h1>
+        <h1>Doadores Parceiros</h1>
         <table>
             <thead>
                 <tr>

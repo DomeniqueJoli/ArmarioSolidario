@@ -37,24 +37,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>
-                        <input type="file" class="inst-img-input">
-                    </td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                </tr>
-                <tr>
-                <td colspan="8" style="text-align: center;">
-                <button class="ver-mais">Ver mais</button>
-                </td>
-                </tr>
+  <tr>
+    <td><input type="file" class="inst-img-input"></td>
+    <td><input type="text" class="input"></td>
+    <td><input type="text" class="input"></td>
+    <td><input type="text" class="input"></td>
+    <td><input type="text" class="input"></td>
+    <td><input type="text" class="input"></td>
+    <td><input type="text" class="input"></td>
+    <td></td>
+  </tr>
+  <tr class="btn-row">
+    <td colspan="8" style="text-align: center;">
+      <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
+    </td>
+  </tr>
 
-            </tbody>
+</tbody>
+
         </table>
     </main>
 
