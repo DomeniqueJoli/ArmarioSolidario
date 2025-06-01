@@ -3,6 +3,7 @@ body {
     margin: 0;
     background-color: #fff;
 }
+
 .topnav {
     width: 1330px;
     height: 100px;
@@ -10,17 +11,16 @@ body {
     display: flex;
     align-items: center;
     padding-left: 20px;
-    gap: 50px; 
-  }
-  
-  .logo {
+    gap: 40px;  
+}
+
+.logo {
     width: 110px;
     height: 93px;
     margin-top: 0;
-  }
-  
-  a {
-    color: #1D3557;
+}
+a {
+    color: #B6312C;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -34,11 +34,11 @@ body {
   }
   
   a {
-    color: #1D3557;
+    color: #B6312C;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
-    padding: 9px 15px;
+    padding: 10px 15px;
     display: inline-block; 
     position: relative;
     transition: all 0.3s ease;
@@ -51,7 +51,7 @@ body {
     left: 0;
     height: 2px;
     width: 0%;
-    background-color: #a8cfe2;
+    background-color: #e85f5b;
     transition: width 0.3s ease;
   }
   
@@ -60,10 +60,11 @@ body {
   }
   
   a:hover {
-    color: #457b9d;
+    color: #c44540;
     transform: scale(1.05); 
   }
   
+
 main {
     padding: 40px;
 }
@@ -99,10 +100,6 @@ td {
     border-radius: 5px;
 }
 
-.inst-img-input {
-    width: 100%;
-    padding: 6px;
-}
 .ver-mais {
     background-color: #76A8C1;
     color: white;
@@ -111,7 +108,11 @@ td {
     border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 80%; /* ou 100% se quiser total */
+    width: 80%;
     font-size: 16px;
-    max-width: 600px; /* limite opcional para evitar exagero */
+    max-width: 600px;
+}
+
+.ver-mais:hover {
+    background-color: #5e91aa;
 }

@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Instituições Parceiras</title>
     <link rel="stylesheet" href="styleList.css">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
 
     <div class="topnav">
-        <img src="..\Images/logo.png" alt="Logo" class="logo">
+        <img src="..\Images\logo.png" alt="Logo" class="logo">
         <a href="#">Home</a>
         <a href="#">Adicionar Ação</a>
         <a href="#">Doadores</a>
@@ -44,7 +45,11 @@
                     <td><input type="text" class="input"></td>
                     <td><input type="text" class="input"></td>
                 </tr>
-                <td><button class="ver-mais">Ver mais</button></td>
+                <tr>
+                <td colspan="8" style="text-align: center;">
+                <button class="ver-mais">Ver mais</button>
+                </td>
+                </tr>
 
             </tbody>
         </table>
