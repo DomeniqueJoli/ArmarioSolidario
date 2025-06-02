@@ -1,5 +1,12 @@
+<?php
+ session_start();  
+ if(isset($_SESSION["nome_doador"]))  
+ {  
+    echo '<h3>Login finalizado! Bem-vindo: '.$_SESSION["nome_doador"].'</h3>';  
+ }  
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-bt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

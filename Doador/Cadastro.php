@@ -1,3 +1,35 @@
+<?php
+require_once('../config/Database.php');
+require_once('Doador.php');
+
+if ($_POST) {
+  $db = (new Database())->getConnection();
+  $doador = new Doador($db);
+  $doador->nome_doador = $_POST['nome_doador'];
+  $doador->cpf_doador = $_POST['cpf_doador']; 
+  $doador->descricao_doador = $_POST['descricao_doador'];
+  $doador->dataNasc_doador = $_POST['dataNasc_doador'];
+  $doador->contatoEmail_doador = $_POST['contatoEmail_doador'];
+  $doador->contatoTelefone_doador = $_POST['contatoTelefone_doador'];
+  $doador->site_doador = $_POST['site_doador'];
+  $doador->cep_doador = $_POST['cep_doador'];
+  $doador->estado_doador = $_POST['estado_doador'];
+  $doador->cidade_doador = $_POST['cidade_doador'];
+  $doador->bairro_doador = $_POST['bairro_doador'];
+  $doador->rua_doador = $_POST['rua_doador'];
+  $doador->numLocal_doador = $_POST['numLocal_doador'];
+  $doador->senhaDoador = $_POST['senhaDoador'];
+  $doador->confirmarSenhaDoador = $_POST['confirmarSenhaDoador'];
+ 
+    if ($doador->criarDoador()) 
+    {
+    header("Location: ../LoginDoa/Login.php");
+    exit;
+    }
+  
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,81 +44,81 @@
 
 <div class="titulo">
     <h1>Cadastro de Doadores</h1>
-      <img src="..\Images/logo.png" alt="" class="logo"> 
+      <img src="../Images/logo.png" alt="" class="logo"> 
 </div>
 
-  <form>
+  <form method="post">
     <div class="top-section">
       <div class="foto-instituicao">Foto do Doador</div>
       <div class="dados-basicos">
         <div>
           <label>Nome completo</label>
-          <input type="text" name="nomeInst" required />
+          <input type="text" name="nome_doador" required/>
         </div>
         <div>
           <label>CPF</label>
-          <input type="text" name="cnpjInst" required />
+          <input type="text" name="cpf_doador" required/>
         </div>
       </div>
     </div>
 
     <div class="form-group">
       <label>Biografia</label>
-      <textarea name="bioDoa" required></textarea>
+      <textarea name="descricao_doador" ></textarea>
     </div>
 
     <div class="form-grid">
       <div class="form-half">
         <label>Data de nascimento</label>
-        <input type="date" name="DataNasc" required />
+        <input type="date" name="dataNasc_doador" required/>
       </div>
 
        <div class="form-third">
         <label>CEP</label>
-        <input type="text" name="cepDoa" required />
+        <input type="text" name="cep_doador" required/>
       </div>
       <div class="form-third">
         <label>Estado</label>
-        <input type="text" name="estadoDoa" required />
+        <input type="text" name="estado_doador"  required/>
       </div>
       <div class="form-third">
         <label>Cidade</label>
-        <input type="text" name="cidadeDoa" required />
+        <input type="text" name="cidade_doador"  required/>
       </div>
 
       <div class="form-third">
         <label>Bairro</label>
-        <input type="text" name="bairroDoa" required />
+        <input type="text" name="bairro_doador" required/>
       </div>
       <div class="form-third">
         <label>Rua</label>
-        <input type="text" name="ruaDoa" required />
+        <input type="text" name="rua_doador"  required/>
       </div>
       <div class="form-third">
         <label>Número</label>
-        <input type="number" name="numlocalDoa" required />
+        <input type="number" name="numLocal_doador" required/>
       </div>
 
       <div class="form-third">
         <label>Telefone</label>
-        <input type="text" name="contatoDoa" required />
+        <input type="text" name="contatoTelefone_doador" required/>
       </div>
       <div class="form-third">
         <label>Email</label>
-        <input type="email" name="emailDoa" required />
+        <input type="email" name="contatoEmail_doador" required/>
       </div>
       <div class="form-third">
         <label>Site / Rede social</label>
-        <input type="text" name="siteDoa" />
+        <input type="text" name="site_doador" required/>
       </div>
 
       <div class="form-half">
         <label>Senha</label>
-        <input type="password" name="senhaDoa" required />
+        <input type="password" name="senhaDoador" required/>
       </div>
       <div class="form-half">
         <label>Confirme sua senha</label>
-        <input type="password" name="senhaDoaConfirmar" required />
+        <input type="password" name="confirmarSenhaDoador" required/>
       </div>
     </div>
 

@@ -4,10 +4,11 @@ class Database {
     private $db_name = 'armarinho_teste';
     private $username = 'root';
     private $password = '';
+
     public $conn;
 
     public function getConnection(): PDO {
-    $this->conn = null;
+    $this->conn = null  ;
 
     try {
         $this->conn = new PDO(

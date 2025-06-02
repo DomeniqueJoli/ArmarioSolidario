@@ -1,3 +1,21 @@
+<?php
+
+require_once ('../Config/Database.php');
+require_once('../Doador/Doador.php');
+
+if($_POST)
+{
+    
+$db = (new Database())->getConnection();
+if("contatoEmail_doador" || 'senhaDoador' == true)
+    {
+    session_start();
+    header("Location: HomeDoa.php");
+    exit;
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,20 +27,21 @@
 </head>
 <body>
 
-<div class="container">
+<form method="POST">
+    <div class="container">
     <div class="quadrado fundo"></div>
     <div class="quadrado frente"></div>
     <img src="../images/logo.png" class="logo" alt="" class="logo">
 
     <div class="form">
-    <label class="tt"><b>Usuário:</b></label>
+    <label class="tt"><b>E-mail:</b></label>
     <br>
-    <input class="ent" type="text">
+    <input class="ent" type="text"  name="contatoEmail_doador" required>
     <br>
 
     <label class="tt"><b>Senha:</b></label>
 <br>
-    <input class="ent" type="text">
+    <input class="ent" type="password" name="senhaDoador" required>
 <br>
     <a class="Sen" href="..\RecuperarSenha\RecupSenha.php">Esqueci minha senha</a>
 <br>
@@ -30,6 +49,8 @@
     </div>
 
 </div>
+
+</form>
 
 </body>
 </html>
