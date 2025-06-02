@@ -42,22 +42,19 @@ if ($_POST) {
 </head>
 <body>
 
-<<<<<<< HEAD
+
+  <form method="post">
+    <!-- 
 <div class="titulo">
     <h1>Cadastro de Doadores</h1>
       <img src="../Images/logo.png" alt="" class="logo"> 
-</div>
-
-  <form method="post">
-=======
-  <form>
-
+</div> -->
     <div class="titulo">
       <h1>Cadastro de Doadores</h1>
       <img src="..\Images\logo.png" alt="" class="logo"> 
     </div>
 
->>>>>>> 0a67cf9dbd3959216cf2b60f742d5cf49497210c
+
     <div class="top-section">
       <div class="foto-instituicao">Foto do Doador</div>
       <div class="dados-basicos">

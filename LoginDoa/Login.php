@@ -7,12 +7,14 @@ if($_POST)
 {
     
 $db = (new Database())->getConnection();
-if("contatoEmail_doador" || 'senhaDoador' == true)
-    {
-    session_start();
-    header("Location: HomeDoa.php");
-    exit;
-    }
+$doador = new Doador($db);  
+    $doador->senhaDoador = $_POST['senhaDoador'];
+    $doador->contatoEmail_doador = $_POST['contatoEmail_doador']; 
+        if ($doador->loginDoador()) {
+            session_start();
+            header("Location: HomeDoa.php");
+            exit;   
+            }
 }
 ?>
 

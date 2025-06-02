@@ -26,9 +26,14 @@ class Doador
     $this->conn = $db;
     }
 
-    public function loginDoador( $contatoEmail_doador, $senhaDoador)
+    public function loginDoador()
     {
-    
+        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador";
+        $resultado  = $this->conn->prepare($query);
+        $resultado->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
+        $resultado->bindParam(':senhaDoador', $this->senhaDoador);
+
+        return $resultado->execute();
     }
 
     public function criarDoador()
@@ -56,6 +61,7 @@ class Doador
         $resultado->bindParam('numLocal_doador', $this->numLocal_doador);
         $resultado->bindParam('senhaDoador',$this->senhaDoador);
         $resultado->bindParam('confirmarSenhaDoador', $this->confirmarSenhaDoador);
+        
         return $resultado->execute();
     }
 }
