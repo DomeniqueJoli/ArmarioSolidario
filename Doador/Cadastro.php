@@ -37,17 +37,27 @@ if ($_POST) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro Instituição</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="styleCads.css">
+  <link rel="stylesheet" href="st.css">
 
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="titulo">
     <h1>Cadastro de Doadores</h1>
       <img src="../Images/logo.png" alt="" class="logo"> 
 </div>
 
   <form method="post">
+=======
+  <form>
+
+    <div class="titulo">
+      <h1>Cadastro de Doadores</h1>
+      <img src="..\Images\logo.png" alt="" class="logo"> 
+    </div>
+
+>>>>>>> 0a67cf9dbd3959216cf2b60f742d5cf49497210c
     <div class="top-section">
       <div class="foto-instituicao">Foto do Doador</div>
       <div class="dados-basicos">

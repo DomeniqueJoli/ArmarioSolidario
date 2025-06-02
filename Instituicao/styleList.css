@@ -63,8 +63,10 @@ a:hover {
 }
 
 
+
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     background-color: #fff;
 }
@@ -74,9 +76,10 @@ main {
 }
 
 h1 {
-    font-size: 40px;
-    margin-bottom: 30px;
-    font-family: 'Times New Roman', Times, serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: normal; 
 }
 
 table {
@@ -85,11 +88,13 @@ table {
 }
 
 th {
-    text-align: center;
-    border-bottom: 2px solid #333;
-    padding: 12px;
-    font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  border-bottom: 2px solid #333;
+  padding: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal; 
 }
+
 
 td {
     padding: 12px;
@@ -108,15 +113,25 @@ td {
     width: 100%;
     padding: 6px;
 }
+
+.btn-row td {
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
 .ver-mais {
-    background-color: #76A8C1;
-    color: white;
-    border: none;
-    padding: 14px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 80%; /* ou 100% se quiser total */
-    font-size: 16px;
-    max-width: 600px; /* limite opcional para evitar exagero */
+  background-color: #457b9d;
+  color: white;
+  padding: 12px 600px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.ver-mais:hover {
+  background-color: #1d3557;
 }

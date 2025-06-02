@@ -10,12 +10,13 @@
 </head>
 <body>
 
-<div class="titulo">
+  <form>
+
+  <div class="titulo">
     <h1>Cadastro de Instituição</h1>
     <img src="..\Images/logo.png" alt="" class="logo"> 
-</div>
+  </div>
 
-  <form>
     <div class="top-section">
       <div class="foto-instituicao">Foto Instituição</div>
       <div class="dados-basicos">

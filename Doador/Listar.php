@@ -16,10 +16,10 @@
         <a href="..\Instituicao\Listar.php">Instituições</a>
         <a href="..\Açao\Listar.php">Ações Criadas</a>
         <a href="..\Instituicao\Perfil.php">Perfil</a>
-        </div>
+    </div>
 
     <main>
-        <h1>Lista de Doadores</h1>
+        <h1>Doadores Parceiros</h1>
         <table>
             <thead>
                 <tr>
@@ -30,6 +30,7 @@
                     <th>Qtd. Ações Participadas</th>
                 </tr>
             </thead>
+
             <tbody>
                 <tr>
                     <td><input type="text" class="input"></td>
@@ -37,12 +38,14 @@
                     <td><input type="text" class="input"></td>
                     <td><input type="text" class="input"></td>
                     <td><input type="number" class="input" min="0"></td>
+                    <td></td>
                 </tr>
-                <tr>
-                    <td colspan="5" style="text-align: center;">
-                        <button class="ver-mais">Ver mais</button>
+                <tr class="btn-row">
+                    <td colspan="8" style="text-align: center;">
+                        <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
                     </td>
                 </tr>
+
             </tbody>
         </table>
     </main>
