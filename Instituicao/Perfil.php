@@ -20,12 +20,16 @@
     </div>
 
     <main>
-        <p>sdlkfjasçlkfjsdçlkfjslkdjfsldkjfslç</p>
+        <div class="circle"></div>
     </main>
 
     <div class="background-container">
         <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image">
-        <div class="fundo"></div>
+        <div class="fundo">
+            <h1>Descrição: </h1>
+            <p>descri</p>
+        </div>
+        
     </div>
 
 </body>
