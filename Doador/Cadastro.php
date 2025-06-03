@@ -1,5 +1,5 @@
 <?php
-require_once('../config/Database.php');
+require_once('../Config/Database.php');
 require_once('Doador.php');
 
 if ($_POST) {

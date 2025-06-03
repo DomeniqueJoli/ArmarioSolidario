@@ -1,11 +1,11 @@
 .topnav {
   /* width: 1330px; */
   height: 100px;
-  margin-top: 10px;
+  margin-top: 5px;
   display: flex;
   align-items: center;
   padding-left: 20px;
-  gap: 10px; 
+  gap: 40px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
