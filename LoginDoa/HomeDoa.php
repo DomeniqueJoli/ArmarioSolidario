@@ -1,5 +1,8 @@
+<?php
+session_start();  
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +11,13 @@
     <link rel="stylesheet" href="styleHomeDoa.css">
 </head>
 <body>
- 
+
 
 <div class="topnav">    
 <img src="Images/logo.png" alt="" class="logo"> 
 
     <a href="HomeDoa.php">Home</a>    
     <a href="Peça\Listar.php">Adicionar Peça</a>
-    <a href="Doador\Listar.php">Doadores</a>
     <a href="Instituicao\Listar.php">Instituições</a>
     <a href="Peça\Listar.php">Peças Criadas</a>
     <a href="Doador\Perfil.php">Perfil</a>
@@ -38,7 +40,7 @@ vulnerabilidade, por meio de parcerias com instituições sérias e comprometida
 
 <br>
 Mais do que doar, o Armário Solidário busca criar uma cultura de empatia, reaproveitamento e consciência social. Queremos inspirar pessoas a olhar com mais atenção para o que têm, entender o valor da  <br>
- partilha e fazer parte de uma corrente do bem. Porque pequenos gestos, quando movidos pelo amor ao próximo, geram grandes impactos.
+partilha e fazer parte de uma corrente do bem. Porque pequenos gestos, quando movidos pelo amor ao próximo, geram grandes impactos.
 </p>
 
 </div>
