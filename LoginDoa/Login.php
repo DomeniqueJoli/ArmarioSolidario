@@ -1,17 +1,16 @@
 <?php
-
 require_once ('../Config/Database.php');
 require_once('../Doador/Doador.php');
-
+session_start(); 
 if($_POST)
 {
     
 $db = (new Database())->getConnection();
-$doador = new Doador($db);  
+$doador = new Doador($db);
+ 
     $doador->senhaDoador = $_POST['senhaDoador'];
     $doador->contatoEmail_doador = $_POST['contatoEmail_doador']; 
         if ($doador->loginDoador()) {
-            session_start();
             header("Location: HomeDoa.php");
             exit;   
             }

@@ -29,7 +29,8 @@
       <div class="foto-peca">Foto da peça</div>
       <div>
         <label for="descricao">Descrição</label>
-        <input type="text" id="descricao" name="descricao" />
+        <!-- <input type="text" id="descricao" name="descricao" /> -->
+         <textarea name="descricao" id="descricao"></textarea>
       </div>
     </div>
 

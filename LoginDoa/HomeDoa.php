@@ -7,11 +7,11 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmárioSolidário</title>
-    <link rel="icon" href="Images/Images/Captura_de_tela_2025-05-28_202248-removebg-preview (1).png" type="image/png">
+    <link rel="icon" href="Images/Captura_de_tela_2025-05-28_202248-removebg-preview (1).png" type="image/png">
     <link rel="stylesheet" href="styleHomeDoa.css">
 </head>
 <body>
- 
+
 
 <div class="topnav">    
 <img src="Images/logo.png" alt="" class="logo"> 
