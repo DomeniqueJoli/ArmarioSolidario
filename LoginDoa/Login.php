@@ -44,7 +44,7 @@ $doador = new Doador($db);
 <br>
     <input class="ent" type="password" name="senhaDoador" required>
 <br>
-    <a class="Sen" href="..\RecuperarSenha\RecupSenha.php">Esqueci minha senha</a>
+    <a class="Sen" href="..\RecuperarSenhaDoa\RecupSenha.php">Esqueci minha senha</a>
 <br>
     <button class="bt" >Entrar</button>
     </div>
