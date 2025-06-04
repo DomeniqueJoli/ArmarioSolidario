@@ -22,12 +22,13 @@ public function __construct($db)
 public function criarPeca()
 {
     $query = "INSERT INTO " . " {$this->table}
-    (descricao_peca, tipo_vestimenta, tempoUso_peca, tamanho_peca, estado_peca,
+    (id_peca, descricao_peca, tipo_vestimenta, tempoUso_peca, tamanho_peca, estado_peca,
     dataCompra_peca, genero_peca, faixaEtaria_peca) 
-    VALUES (:descricao_peca, :tipo_vestimenta, :tempoUso_peca, :tamanho_peca, :estado_peca,
+    VALUES (:id_peca, :descricao_peca, :tipo_vestimenta, :tempoUso_peca, :tamanho_peca, :estado_peca,
     :dataCompra_peca, :genero_peca, :faixaEtaria_peca)";
 
     $resultado = $this->conn->prepare($query);
+    $resultado->bindParam('id_peca', $this->id_peca);
     $resultado->bindParam('descricao_peca' , $this->descricao_peca);
     $resultado->bindParam('tipo_vestimenta' , $this->tipo_vestimenta);
     $resultado->bindParam('tempoUso_peca' , $this->tempoUso_peca);
