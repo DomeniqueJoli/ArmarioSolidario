@@ -1,5 +1,7 @@
 <?php
 require_once('../config/Database.php');
+require_once('../Acoes/Acao.php');
+
 
 if ($_POST) {
   $db = (new Database())->getConnection();
@@ -9,7 +11,7 @@ if ($_POST) {
   $acao-> publicoAlvo_acao= $_POST['publicoAlvo_acao'];
   $acao-> dataInicio_acao= $_POST['dataInicio_acao'];
   $acao-> dataFim_acao= $_POST['dataFim_acao'];
-  $acao-> qntdBeneficiarios_acao= $_POST['qntdBeneficiarios_acao'];
+  $acao-> qntdBeneficiarios= $_POST['qntdBeneficiarios'];
   $acao-> meta_acao= $_POST['meta_acao'];
   $acao-> localFisico_acao= $_POST['localFisico_acao'];
 
@@ -62,7 +64,7 @@ if ($_POST) {
       </div>
       <div>
         <label>Quantidade de Beneficiados</label>
-        <input type="number" name="qntdBeneficiarios_acao" required />
+        <input type="number" name="qntdBeneficiarios" required />
       </div>
     </div>
   </div>
