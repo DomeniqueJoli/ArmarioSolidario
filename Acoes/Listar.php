@@ -47,8 +47,8 @@ $resultado = $acao->listarAcao();
                 <td><input value="<?= $row['descricao_acao'] ?>" type="text" class="input" placeholder="Ex: Descrevendo..." readonly></td>
                 <td><input value="<?= $row['nome_acao'] ?>" type="text" class="input" placeholder="Ex: Dia das crianças..." readonly></td>
                 <td><input value="<?= $row['publicoAlvo_acao'] ?>" type="text" class="input" placeholder="Ex: Crianças..." readonly></td>
-                <td><input value="<?= $row['dataInicio_acao'] ?>" type="text" class="input" placeholder="Ex: 03/03/2025..." readonly></td>
-                <td><input value="<?= $row['dataFim_acao'] ?>" type="text" class="input" placeholder="Ex: 10/03/2025..." readonly></td>
+                <td><input value="<?= $row['dataInicio_acao'] ?>" type="date" class="input" placeholder="Ex: 03/03/2025..." readonly></td>
+                <td><input value="<?= $row['dataFim_acao'] ?>" type="date" class="input" placeholder="Ex: 10/03/2025..." readonly></td>
                 <td><input value="<?= $row['qntdBeneficiarios_acao'] ?>" type="text" class="input" placeholder="Ex: 24" readonly></td>
                 <td><input value="<?= $row['meta_acao'] ?>" type="text" class="input" placeholder="Ex: 50 peças" readonly></td>
                 <td><input value="<?= $row['localFisico_acao'] ?>" type="text" class="input" placeholder="Ex: Instituto Federal..." readonly></td>
