@@ -4,6 +4,7 @@ require_once ('Peca.php');
 $db = (new Database())->getConnection();
 $peca = new Peca($db);
 $resultado = $peca->listarPeca();
+
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +56,8 @@ $resultado = $peca->listarPeca();
                 <tr>
                     <td colspan="7" style="text-align: center;">
                         <div class="btn-container">
-                            <button class="ex">Excluir</button>
-                            <button class="alt">Atualizar</button>
+                            <a href="Excluir.php?id=<?= $row['id_peca'] ?>"><button value="" type="submit" class="ex">Excluir</button> </a>
+                            <a href="Alterar.php"><button value="<?= $row['id_peca'] ?>" type="submit" class="alt">Atualizar</button></a>
                         </div>
                     </td>
                 </tr>

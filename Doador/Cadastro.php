@@ -44,11 +44,6 @@ if ($_POST) {
 
 
   <form method="post">
-    <!-- 
-<div class="titulo">
-    <h1>Cadastro de Doadores</h1>
-      <img src="../Images/logo.png" alt="" class="logo"> 
-</div> -->
     <div class="titulo">
       <h1>Cadastro de Doadores</h1>
       <img src="..\Images\logo.png" alt="" class="logo"> 
