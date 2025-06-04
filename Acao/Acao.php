@@ -39,4 +39,31 @@ public function criarAcao()
         return $resultado->execute();
 }
 
+
+public function listarAcao()
+{
+    $query = "SELECT * FROM " . "{$this->table}";
+    $resultado = $this->conn->prepare($query);
+    $resultado->execute();
+    return $resultado;
+}
+
+public function buscarPorId() 
+{
+    $query = "SELECT * FROM " . "{$this->table}   WHERE id_acao = :id_acao
+    LIMIT 1";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_acao', $this->id_acao);
+    $resultado->execute();
+    return $resultado->fetch(PDO::FETCH_ASSOC);
+}
+
+public function deletarPeca() {
+    $query = "DELETE FROM " . "{$this->table}   WHERE id_acao = :id_acao";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_acao', $this->id_acao);
+    return $resultado->execute();
+    }
+
+
 ?>
