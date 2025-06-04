@@ -1,6 +1,5 @@
 <?php
-
-class Peca
+class Acao
 {
 private $conn;
 private $table = "acao";
@@ -13,6 +12,7 @@ public $dataFim_acao;
 public $qntdBeneficiarios_acao; 
 public $meta_acao;  
 public $localFisico_acao;
+}
 
 public function __construct($db) 
 {
