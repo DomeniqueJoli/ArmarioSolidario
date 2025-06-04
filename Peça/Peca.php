@@ -58,6 +58,12 @@ public function buscarPorId()
     return $resultado->fetch(PDO::FETCH_ASSOC);
 }
 
+public function deletarPeca() {
+    $query = "DELETE FROM " . "{$this->table}   WHERE id_peca = :id_peca";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_peca', $this->id_peca);
+    return $resultado->execute();
+    }
+
 }
 
-?>
