@@ -9,10 +9,9 @@ public $nome_acao;
 public $publicoAlvo_acao; 
 public $dataInicio_acao;  
 public $dataFim_acao; 
-public $qntdBeneficiarios_acao; 
+public $qntdBeneficiarios; 
 public $meta_acao;  
 public $localFisico_acao;
-}
 
 public function __construct($db) 
 {
@@ -32,11 +31,12 @@ public function criarAcao()
         $resultado->bindParam('publicoAlvo_acao', $this->publicoAlvo_acao);
         $resultado->bindParam('dataInicio_acao', $this->dataInicio_acao);
         $resultado->bindParam('dataFim_acao', $this->dataFim_acao);
-        $resultado->bindParam('qntdBeneficiarios_acao', $this->qntdBeneficiarios_acao);
+        $resultado->bindParam('qntdBeneficiarios_', $this->qntdBeneficiarios);
         $resultado->bindParam('meta_acao', $this->meta_acao);
         $resultado->bindParam('localFisico_acao', $this->localFisico_acao);
         
         return $resultado->execute();
+}
 }
 
 ?>

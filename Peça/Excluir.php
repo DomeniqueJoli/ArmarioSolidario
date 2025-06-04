@@ -4,7 +4,7 @@ require_once ('Peca.php');
 
 $db = (new Database())->getConnection();
 $peca = new Peca($db);
-$peca->id_peca = $_GET['id_doador'];
+$peca->id_peca = $_GET['id_peca'];
 
 if ($peca->deletarPeca()) 
 {

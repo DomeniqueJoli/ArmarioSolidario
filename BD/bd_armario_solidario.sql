@@ -29,7 +29,7 @@ CREATE TABLE Doador
 );
 
 CREATE TABLE Instituicao (
-    id_instituicao int PRIMARY KEY,
+    id_instituicao int AUTO-INCREMENT PRIMARY KEY,
     cnpj_instituicao varchar(18),
     nomeFantasia_instituicao varchar(20),
     razaoSocial_instituicao varchar(20),

@@ -43,8 +43,9 @@ $resultado = $peca->listarPeca();
                 </tr>
             </thead>
             <tbody>
-                <?php while($row = $resultado->fetch(PDO::FETCH_ASSOC == true)):?>
+                <?php while($row = $resultado->fetch(PDO::FETCH_ASSOC)):?>
                 <tr>
+                    <td><input value="<?= $row['id_peca']?>" type="hidden"></td>
                     <td><input value="<?= $row['tipo_vestimenta'] ?>" type="text" class="input" placeholder="Ex: Camiseta" readonly></td>
                     <td><input value="<?= $row['estado_peca'] ?>" type="text" class="input" placeholder="Novo/Usado" readonly></td>
                     <td><input value="<?= $row['dataCompra_peca'] ?>" type="date" class="input" readonly></td>
@@ -56,7 +57,10 @@ $resultado = $peca->listarPeca();
                 <tr>
                     <td colspan="7" style="text-align: center;">
                         <div class="btn-container">
-                            <a href="Excluir.php?id=<?= $row['id_peca'] ?>"><button value="" type="submit" class="ex">Excluir</button> </a>
+                            <form method="post" action="Excluir.php">
+                            <input type="hidden" name="id_doador" value="<?= $row['id_peca'] ?>">
+                            <button type="submit" class="ex">Excluir</button>
+                            </form>
                             <a href="Alterar.php"><button value="<?= $row['id_peca'] ?>" type="submit" class="alt">Atualizar</button></a>
                         </div>
                     </td>
