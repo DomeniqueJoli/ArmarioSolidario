@@ -17,7 +17,7 @@
     <a href="Acoes\Cadastro.php">Adicionar Ação</a>
     <a href="Doador\Listar.php">Doadores</a>
     <a href="Instituicao\Listar.php">Instituições</a>
-    <a href="Acaes\Listar.php">Ações Criadas</a>
+    <a href="Acoes\Listar.php">Ações Criadas</a>
     <a href="Instituicao\Perfil.php">Perfil</a>
 </div>
 

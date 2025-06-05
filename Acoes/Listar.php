@@ -4,7 +4,6 @@ require_once ('Acao.php');
 $db = (new Database())->getConnection();
 $acao = new Acao($db);
 $resultado = $acao->listarAcao();
-
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +12,7 @@ $resultado = $acao->listarAcao();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armário Solidário</title>
-    <link rel="stylesheet" href="sl.css">
+    <link rel="stylesheet" href="List.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
@@ -40,38 +39,40 @@ $resultado = $acao->listarAcao();
                     <th>Data Fim</th>
                     <th>Qtd. Beneficiarios</th>
                     <th>Status</th>
+                    <th>Local Coleta</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-               <td><textarea value="<?= $row['descricao_acao'] ?>" type="text" class="input" name="descricao_acao" placeholder="Ex: Dia das crianças..."></textarea></td>
-                <td><input value="<?= $row['nome_acao'] ?>" type="text" class="input" placeholder="Ex: Dia das crianças..." readonly></td>
-                <td><input value="<?= $row['publicoAlvo_acao'] ?>" type="text" class="input" placeholder="Ex: Crianças..." readonly></td>
-                <td><input value="<?= $row['dataInicio_acao'] ?>" type="date" class="input" placeholder="Ex: 03/03/2025..." readonly></td>
-                <td><input value="<?= $row['dataFim_acao'] ?>" type="date" class="input" placeholder="Ex: 10/03/2025..." readonly></td>
-                <td><input value="<?= $row['qntdBeneficiarios_acao'] ?>" type="text" class="input" placeholder="Ex: 24" readonly></td>
-                <td><input value="<?= $row['meta_acao'] ?>" type="text" class="input" placeholder="Ex: 50 peças" readonly></td>
-                <td><input value="<?= $row['localFisico_acao'] ?>" type="text" class="input" placeholder="Ex: Instituto Federal..." readonly></td>
+                <?php foreach($resultado as $row): ?>
+            <tr>
+                <td><?= htmlspecialchars($row['nome_acao']) ?></td>
+                <td><?= htmlspecialchars($row['publicoAlvo_acao']) ?></td>
+                <td><?= htmlspecialchars($row['dataInicio_acao']) ?></td>
+                <td><?= htmlspecialchars($row['dataFim_acao']) ?></td>
+                <td><?= htmlspecialchars($row['qntdBeneficiarios']) ?></td>
+                <td><?= htmlspecialchars($row['meta_acao']) ?></td>
+                <td><?= htmlspecialchars($row['localFisico_acao']) ?></td>
+            
+            </tr>
 
-                <td><input type="text" class="input"></td>
-                    <td><input type="date" class="input"></td>
-                    <td><input type="date" class="input"></td>
-                    <td><input type="number" class="input" min="0"></td>
-                    <td><input type="text" class="input"></td>
-                <tr>
-                <td colspan="6" style="text-align: center;">
-                    <div class="btn-container">
-                    <button class="ex">Excluir</button>
-                    <button class="alt">Atualizar</button>
-                    </div>
-                </td>
+            <tr>
+                    <td colspan="7" style="text-align: center;">
+                        <div class="btn-container" style="display: flex; justify-content: center; gap: 10px;">
+                            <form method="post" action="Excluir.php">
+                                <input type="hidden" name="id" value="0">
+                                <button class="ex" type="submit">Excluir</button>
+                            </form>
+                            <form method="get" action="Atualizar.php">
+                            <input type="hidden" name="id" value="0">
+                            <button class="alt" type="submit">Atualizar</button>
+                            </form>
+                        </div>
+                    </td>
                 </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</main>
 
-            </tbody>
-        </table>
-    </main>
-
-</body>
-</html>    
 </body>
 </html>
