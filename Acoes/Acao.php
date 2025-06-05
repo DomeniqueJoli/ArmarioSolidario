@@ -58,6 +58,23 @@ class Acao
         return $resultado->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function editar() {
+        $query = "UPDATE " . $this->table . "
+        SET nome = :nome, 
+        contato = :contato,
+        email = :email, 
+        idade = :idade 
+        WHERE id = :id";
+        
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':nome', $this->nome);
+        $resultado->bindParam(':contato', $this->contato);
+        $resultado->bindParam(':email', $this->email);
+        $resultado->bindParam(':idade', $this->idade);
+        $resultado->bindParam(':id', $this->id);
+        return $resultado->execute();
+        }
+
     public function deletarAcao() 
     {
         $query = "DELETE FROM {$this->table} WHERE id_acao = :id_acao";
