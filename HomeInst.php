@@ -14,10 +14,10 @@
 <img src="Images/logo.png" alt="" class="logo"> 
 
     <a href="HomeInst.php">Home</a>    
-    <a href="Açao\Cadastro.php">Adicionar Ação</a>
+    <a href="Acoes\Cadastro.php">Adicionar Ação</a>
     <a href="Doador\Listar.php">Doadores</a>
     <a href="Instituicao\Listar.php">Instituições</a>
-    <a href="Açao\Listar.php">Ações Criadas</a>
+    <a href="Acaes\Listar.php">Ações Criadas</a>
     <a href="Instituicao\Perfil.php">Perfil</a>
 </div>
 
