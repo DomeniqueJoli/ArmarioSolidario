@@ -1,3 +1,22 @@
+<?php
+require_once ('../Config/Database.php');
+require_once('../Instituicao/Instituicao.php');
+session_start(); 
+if($_POST)
+{
+    
+$db = (new Database())->getConnection();
+$instituicao = new Instituicao($db);
+ 
+    $instituicao->senhaInstituicao = $_POST['senhaInstituicao'];
+    $instituicao->contatoEmail_Instituicao = $_POST['contatoEmail_Instituicao']; 
+        if ($instituicao->loginInstituicao()) {
+            header("Location: ../HomeInst.php");
+            exit;   
+            }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

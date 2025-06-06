@@ -11,7 +11,7 @@ $doador = new Doador($db);
     $doador->senhaDoador = $_POST['senhaDoador'];
     $doador->contatoEmail_doador = $_POST['contatoEmail_doador']; 
         if ($doador->loginDoador()) {
-            header("Location: HomeDoa.php");
+            header("Location: ../HomeDoa.php");
             exit;   
             }
 }
