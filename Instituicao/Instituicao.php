@@ -78,6 +78,17 @@ class Instituicao
         }
         
     }
+
+    public function listarInstituicao() 
+    {
+        $query = "SELECT id_instituicao, nomeFantasia_instituicao, tipoInstituicao, areaAtuacao_instituicao, estado_instituicao, cidade_instituicao, contatoEmail_instituicao, contatoTelefone_instituicao
+        FROM " . $this->table;
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
     
 }
 

@@ -21,6 +21,9 @@
 
     <main>
         <div class="circle"></div>
+
+        <button method="get" onsubmit="return confirm('Tem certeza que deseja excluir seu perfil? Essa ação não pode ser desfeita.');">Excluir Perfil</button>
+        <button>Alterar Perfil</button>
     </main>
 
     <div class="background-container">
