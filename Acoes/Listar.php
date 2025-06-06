@@ -62,10 +62,11 @@ $resultado = $acao->listarAcao();
                                 <input type="hidden" name="id" value="0">
                                 <button class="ex" type="submit">Excluir</button>
                             </form>
-                            <form method="get" action="Atualizar.php">
-                            <input type="hidden" name="id" value="0">
-                            <button class="alt" type="submit">Atualizar</button>
+                            <form method="get" action="Alterar.php">
+                                <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
+                                <button class="alt" type="submit">Atualizar</button>
                             </form>
+
                         </div>
                     </td>
                 </tr>

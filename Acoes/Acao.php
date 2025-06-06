@@ -58,22 +58,33 @@ class Acao
         return $resultado->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function editar() {
-        $query = "UPDATE " . $this->table . "
-        SET nome = :nome, 
-        contato = :contato,
-        email = :email, 
-        idade = :idade 
-        WHERE id = :id";
-        
-        $resultado = $this->conn->prepare($query);
-        $resultado->bindParam(':nome', $this->nome);
-        $resultado->bindParam(':contato', $this->contato);
-        $resultado->bindParam(':email', $this->email);
-        $resultado->bindParam(':idade', $this->idade);
-        $resultado->bindParam(':id', $this->id);
-        return $resultado->execute();
-        }
+    public function alterarAcao() {
+        $query = "UPDATE {$this->table} SET 
+            nome_acao = :nome_acao, 
+            descricao_acao = :descricao_acao,
+            publicoAlvo_acao = :publicoAlvo_acao,
+            dataInicio_acao = :dataInicio_acao,
+            dataFim_acao = :dataFim_acao,
+            qntdBeneficiarios = :qntdBeneficiarios,
+            meta_acao = :meta_acao,
+            localFisico_acao = :localFisico_acao
+            WHERE id_acao = :id_acao";
+    
+        $stmt = $this->conn->prepare($query);
+    
+        $stmt->bindParam(':nome_acao', $this->nome_acao);
+        $stmt->bindParam(':descricao_acao', $this->descricao_acao);
+        $stmt->bindParam(':publicoAlvo_acao', $this->publicoAlvo_acao);
+        $stmt->bindParam(':dataInicio_acao', $this->dataInicio_acao);
+        $stmt->bindParam(':dataFim_acao', $this->dataFim_acao);
+        $stmt->bindParam(':qntdBeneficiarios', $this->qntdBeneficiarios);
+        $stmt->bindParam(':meta_acao', $this->meta_acao);
+        $stmt->bindParam(':localFisico_acao', $this->localFisico_acao);
+        $stmt->bindParam(':id_acao', $this->id_acao);
+    
+        return $stmt->execute();
+    }
+    
 
     public function deletarAcao() 
     {
