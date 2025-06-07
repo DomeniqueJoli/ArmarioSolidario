@@ -12,4 +12,5 @@ if ($peca->deletarPeca())
     exit;
 }
 
+
 ?>

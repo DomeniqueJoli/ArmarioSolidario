@@ -80,7 +80,7 @@ if($_POST)
       </div>
       <div>
         <label for="genero">Gênero</label>
-        <input type="text" id="genero" name="genero_peca" required/>
+        <input class="genero" type="text" id="genero" name="genero_peca" required/>
       </div>
       <div>
         <label for="faixa">Faixa etária</label>
