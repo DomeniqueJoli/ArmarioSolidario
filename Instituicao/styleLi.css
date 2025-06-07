@@ -9,7 +9,10 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+a{
+  color: black;
+  text-decoration: none;
+}
 
 .logo {
   width: 110px;
@@ -17,7 +20,7 @@
   margin-top: 0;
 }
 
-a {
+.topnav a {
   color: #1D3557;
   text-align: center;
   text-decoration: none;
@@ -27,11 +30,11 @@ a {
   white-space: nowrap; 
 }
 
-a:not(:last-child) {
+.topnav a:not(:last-child) {
   margin-right: 35px; 
 }
 
-a {
+.topnav a {
   color: #1D3557;
   text-align: center;
   text-decoration: none;
@@ -42,7 +45,7 @@ a {
   transition: all 0.3s ease;
 }
 
-a::after {
+.topnav a::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -53,11 +56,11 @@ a::after {
   transition: width 0.3s ease;
 }
 
-a:hover::after {
+.topnav a:hover::after {
   width: 100%;
 }
 
-a:hover {
+.topnav a:hover {
   color: #457b9d;
   transform: scale(1.05); 
 }

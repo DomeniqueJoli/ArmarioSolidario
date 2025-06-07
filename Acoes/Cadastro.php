@@ -2,27 +2,25 @@
 require_once('../config/Database.php');
 require_once('../Acoes/Acao.php');
 
-
 if ($_POST) {
   $db = (new Database())->getConnection();
   $acao = new Acao($db);
-  $acao-> descricao_acao= $_POST['descricao_acao'];
-  $acao-> nome_acao= $_POST['nome_acao']; 
-  $acao-> publicoAlvo_acao= $_POST['publicoAlvo_acao'];
-  $acao-> dataInicio_acao= $_POST['dataInicio_acao'];
-  $acao-> dataFim_acao= $_POST['dataFim_acao'];
-  $acao-> qntdBeneficiarios= $_POST['qntdBeneficiarios'];
-  $acao-> meta_acao= $_POST['meta_acao'];
-  $acao-> localFisico_acao= $_POST['localFisico_acao'];
+  $acao->descricao_acao = $_POST['descricao_acao'];
+  $acao->nome_acao = $_POST['nome_acao']; 
+  $acao->publicoAlvo_acao = $_POST['publicoAlvo_acao'];
+  $acao->dataInicio_acao = $_POST['dataInicio_acao'];
+  $acao->dataFim_acao = $_POST['dataFim_acao'];
+  $acao->qntdBeneficiarios = $_POST['qntdBeneficiarios'];
+  $acao->meta_acao = $_POST['meta_acao'];
+  $acao->localFisico_acao = $_POST['localFisico_acao'];
 
-    if ($acao->criarAcao()) 
-    {
-    header("Location: Acao.php ");
+  if ($acao->criarAcao()) {
+    echo "<script>alert('Ação cadastrada com sucesso!'); window.location.href='Acao.php';</script>";
     exit;
-    }
-  
+  }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">

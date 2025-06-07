@@ -1,16 +1,25 @@
+<?php
+require_once('../Config/Database.php');
+require_once('Instituicao.php');
+
+$db = (new Database())->getConnection();
+$instituicao = new Instituicao($db);
+$resultado = $instituicao->listarInstituicao();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armário Solidário</title>
-    <link rel="stylesheet" href="styleList.css">
-    <link rel="icon" href="../Images/logo.png" type="image/png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Armário Solidário - Instituições</title>
+    <link rel="stylesheet" href="styleLi.css" />
+    <link rel="icon" href="../Images/logo.png" type="image/png" />
 </head>
 <body>
 
     <div class="topnav">
-        <img src="..\Images\logo.png" alt="Logo" class="logo">
+        <img src="..\Images\logo.png" alt="Logo" class="logo" />
         <a href="..\HomeInst.php">Home</a>
         <a href="..\Açao\Cadastro.php">Adicionar Ação</a>
         <a href="..\Doador\Listar.php">Doadores</a>
@@ -19,44 +28,44 @@
         <a href="..\Instituicao\Perfil.php">Perfil</a>
     </div>
 
-</body>
-
-<main>
-    <h1>Instituições Parceiras</h1>
-    <table>
+    <main>
+        <h1>Instituições Parceiras</h1>
+        <table>
             <thead>
                 <tr>
-                    <th>Logo</th>
-                    <th>Nome</th>
+                    <th>Nome Fantasia</th>
                     <th>Tipo</th>
                     <th>Área de Atuação</th>
                     <th>Estado</th>
                     <th>Cidade</th>
                     <th>Contato</th>
-                    <th></th>
+                    <th>Ações</th>
                 </tr>
             </thead>
             <tbody>
+                <?php foreach ($resultado as $row): ?>
                 <tr>
-                    <td><input type="file" class="inst-img-input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td></td>
+                    <td><?= htmlspecialchars($row['nomeFantasia_instituicao']) ?></td>
+                    <td><?= htmlspecialchars($row['tipoInstituicao']) ?></td>
+                    <td><?= htmlspecialchars($row['areaAtuacao_instituicao']) ?></td>
+                    <td><?= htmlspecialchars($row['estado_instituicao']) ?></td>
+                    <td><?= htmlspecialchars($row['cidade_instituicao']) ?></td>
+                    <td>
+                        <a href="mailto:<?= htmlspecialchars($row['contatoEmail_instituicao']) ?>">
+                            <?= htmlspecialchars($row['contatoEmail_instituicao']) ?>
+                        </a><br>
+                        <a href="tel:<?= htmlspecialchars($row['contatoTelefone_instituicao']) ?>">
+                            <?= htmlspecialchars($row['contatoTelefone_instituicao']) ?>
+                        </a>
+                    </td>
+                    <td>
+                        <button onclick="window.location.href='../Instituicao/Perfil.php?id=<?= urlencode($row['id_instituicao']) ?>'">Ver Perfil</button>
+                    </td>
                 </tr>
-                <tr class="btn-row">
-
-                <td colspan="8" style="text-align: center;">
-                    <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
-                </td>
-                </tr>
-
+                <?php endforeach; ?>
             </tbody>
+        </table>
+    </main>
 
-    </table>
-</main>
 </body>
 </html>
