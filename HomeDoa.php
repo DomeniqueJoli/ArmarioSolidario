@@ -30,15 +30,14 @@ session_start();
 <img src="Images/logo.png" alt="" class="logo"> 
 
     <a href="HomeDoa.php">Home</a>    
-<<<<<<< HEAD
+
     <a href="Açao\Cadastro.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
     <a href="Açao\Listar.php">Participações</a>
-=======
+
     <a href="Peça\Listar.php">Adicionar Peça</a>
     <a href="Instituicao\Listar.php">Instituições</a>
     <a href="Peça\Listar.php">Peças Criadas</a>
->>>>>>> 01ff6d711ee3f27a348e21eee3ffadce603474e8
     <a href="Doador\Perfil.php">Perfil</a>
 </div>
 
