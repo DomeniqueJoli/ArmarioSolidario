@@ -31,12 +31,46 @@ class Instituicao
 
     public function loginInstituicao()
     {
-        $query = "SELECT id_instituicao FROM " . " {$this->table} WHERE contatoEmail_instituicao = :contatoEmail_instituicao AND senhaInstituicao = :senhaInstituicao";
-        $resultado  = $this->conn->prepare($query);
+        $query = "SELECT id_instituicao, nomeFantasia_instituicao FROM {$this->table} 
+                  WHERE contatoEmail_instituicao = :contatoEmail_instituicao 
+                  AND senhaInstituicao = :senhaInstituicao 
+                  LIMIT 1";
+    
+        $resultado = $this->conn->prepare($query);
         $resultado->bindParam(':contatoEmail_instituicao', $this->contatoEmail_instituicao);
         $resultado->bindParam(':senhaInstituicao', $this->senhaInstituicao);
+        $resultado->execute();
+    
+        if ($resultado->rowCount() > 0) {
+            $row = $resultado->fetch(PDO::FETCH_ASSOC);
+    
+            $_SESSION['id_instituicao'] = $row['id_instituicao'];
+            $_SESSION['nomeFantasia'] = $row['nomeFantasia_instituicao'];
+    
+            return true;
+        }
+    
+        return false;
+    }
 
-        return $resultado->execute();
+    public function buscarPorId()
+    {
+        $query = "SELECT 
+                    id_instituicao,
+                    nomeFantasia_instituicao,
+                    contatoEmail_instituicao,
+                    contatoTelefone_instituicao,
+                    cnpj_instituicao,
+                    missao_instituicao
+                FROM {$this->table}
+                WHERE id_instituicao = :id_instituicao
+                LIMIT 1";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':id_instituicao', $this->id_instituicao, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function criarInstituicao()

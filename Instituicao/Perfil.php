@@ -1,3 +1,17 @@
+<?php
+session_start();
+require_once '../Config/Database.php';
+require_once 'Instituicao.php';
+if (!isset($_SESSION['id_instituicao'])) {
+    header("Location: ../LoginInst/Login.php");
+    exit;
+}
+$db = (new Database())->getConnection();
+$instituicao = new Instituicao($db);
+$instituicao->id_instituicao = $_SESSION['id_instituicao'];
+$dados = $instituicao->buscarPorId(); 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,20 +34,36 @@
     </div>
 
     <main>
-        <div class="circle"></div>
+    <div class="circle"></div>
 
-        <button method="get" onsubmit="return confirm('Tem certeza que deseja excluir seu perfil? Essa ação não pode ser desfeita.');">Excluir Perfil</button>
-        <button>Alterar Perfil</button>
-    </main>
+    <form method="post" onsubmit="return confirm('Tem certeza que deseja excluir seu perfil? Essa ação não pode ser desfeita.');">
+        <input type="hidden" name="id_instituicao" value="<?= htmlspecialchars($dados['id_instituicao']) ?>">
+        <button type="submit" name="excluir_perfil">Excluir Perfil</button>
+    </form>
 
-    <div class="background-container">
-        <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image">
-        <div class="fundo">
-            <h1>Descrição: </h1>
-            <p>descri</p>
-        </div>
-        
+    <button onclick="window.location.href='Editar.php'">Alterar Perfil</button>
+</main>
+
+<div class="background-container">
+    <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image">
+    <div class="fundo">
+        <h1>Nome: </h1>
+        <p><?= htmlspecialchars($dados['nomeFantasia_instituicao']) ?></p>
+
+        <h1>Email: </h1>
+        <p><?= htmlspecialchars($dados['contatoEmail_instituicao']) ?></p>
+
+        <h1>Telefone: </h1>
+        <p><?= htmlspecialchars($dados['contatoTelefone_instituicao']) ?></p>
+
+        <h1>CNPJ: </h1>
+        <p><?= htmlspecialchars($dados['cnpj_instituicao']) ?></p>
+
+        <h1>Descrição: </h1>
+        <p><?= htmlspecialchars($dados['missao_instituicao']) ?></p>
     </div>
+</div>
+
 
 </body>
 </html>
