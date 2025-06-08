@@ -1,5 +1,5 @@
 .topnav {
-    /* width: 1330px; */
+    width: 1330px;
     height: 100px;
     margin-top: 10px;
     display: flex;
@@ -126,7 +126,7 @@
     font-size: 15px;
     font-weight: 50;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 2s ease;
     margin-top: 10px;
   }
   
@@ -159,7 +159,6 @@
   
   .ex, .alt {
     padding: 12px 50px;
-    height: 40px;
-    width: 500px;
+    height: 20px;
+    width: 400px;
   }
-  

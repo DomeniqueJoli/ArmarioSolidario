@@ -1,22 +1,40 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+=======
 <?php
 session_start();  
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+>>>>>>> 01ff6d711ee3f27a348e21eee3ffadce603474e8
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmárioSolidário</title>
+<<<<<<< HEAD
+    <link rel="icon" href="Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styleHomeInst.css">
+</head>
+<body>
+ 
+=======
     <link rel="icon" href="Images/Captura_de_tela_2025-05-28_202248-removebg-preview (1).png" type="image/png">
     <link rel="stylesheet" href="styleHomeDoa.css">
 </head>
 <body>
 
+>>>>>>> 01ff6d711ee3f27a348e21eee3ffadce603474e8
 
 <div class="topnav">    
 <img src="Images/logo.png" alt="" class="logo"> 
 
     <a href="HomeDoa.php">Home</a>    
+
+    <a href="Açao\Cadastro.php">Procurar Ações</a>
+    <a href="Peça\Listar.php">Suas Peças</a>
+    <a href="Açao\Listar.php">Participações</a>
+
     <a href="Peça\Listar.php">Adicionar Peça</a>
     <a href="Instituicao\Listar.php">Instituições</a>
     <a href="Peça\Listar.php">Peças Criadas</a>
@@ -40,7 +58,11 @@ vulnerabilidade, por meio de parcerias com instituições sérias e comprometida
 
 <br>
 Mais do que doar, o Armário Solidário busca criar uma cultura de empatia, reaproveitamento e consciência social. Queremos inspirar pessoas a olhar com mais atenção para o que têm, entender o valor da  <br>
+<<<<<<< HEAD
+ partilha e fazer parte de uma corrente do bem. Porque pequenos gestos, quando movidos pelo amor ao próximo, geram grandes impactos.
+=======
 partilha e fazer parte de uma corrente do bem. Porque pequenos gestos, quando movidos pelo amor ao próximo, geram grandes impactos.
+>>>>>>> 01ff6d711ee3f27a348e21eee3ffadce603474e8
 </p>
 
 </div>
