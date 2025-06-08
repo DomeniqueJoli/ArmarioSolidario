@@ -15,16 +15,16 @@ $dados = $instituicao->buscarPorId();
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Armário Solidário</title>
-    <link rel="stylesheet" href="stylePerfil.css">
-    <link rel="icon" href="../Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="sp.css" />
+    <link rel="icon" href="../Images/logo.png" type="image/png" />
 </head>
 <body>
 
     <div class="topnav">
-        <img src="../Images/logo.png" alt="Logo" class="logo">
+        <img src="../Images/logo.png" alt="Logo" class="logo" />
         <a href="../HomeInst.php">Home</a>
         <a href="../Acao/Cadastro.php">Adicionar Ação</a>
         <a href="../Doador/Listar.php">Doadores</a>
@@ -34,36 +34,37 @@ $dados = $instituicao->buscarPorId();
     </div>
 
     <main>
-    <div class="circle"></div>
+        <div class="circle"></div>
 
-    <form method="post" onsubmit="return confirm('Tem certeza que deseja excluir seu perfil? Essa ação não pode ser desfeita.');">
-        <input type="hidden" name="id_instituicao" value="<?= htmlspecialchars($dados['id_instituicao']) ?>">
-        <button type="submit" name="excluir_perfil">Excluir Perfil</button>
-    </form>
+        <div class="button-group">
+            <form method="post" onsubmit="return confirm('Tem certeza que deseja excluir seu perfil? Essa ação não pode ser desfeita.');">
+                <input type="hidden" name="id_instituicao" value="<?= htmlspecialchars($dados['id_instituicao']) ?>" />
+                <button type="submit" name="excluir_perfil">Excluir Perfil</button>
+            </form>
 
-    <button onclick="window.location.href='Editar.php'">Alterar Perfil</button>
-</main>
+            <button onclick="window.location.href='Editar.php'">Alterar Perfil</button>
+        </div>
+    </main>
 
-<div class="background-container">
-    <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image">
-    <div class="fundo">
-        <h1>Nome: </h1>
-        <p><?= htmlspecialchars($dados['nomeFantasia_instituicao']) ?></p>
+    <div class="background-container">
+        <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image" />
+        <div class="fundo">
+            <h1>Nome: </h1>
+            <p><?= htmlspecialchars($dados['nomeFantasia_instituicao']) ?></p>
 
-        <h1>Email: </h1>
-        <p><?= htmlspecialchars($dados['contatoEmail_instituicao']) ?></p>
+            <h1>Email: </h1>
+            <p><?= htmlspecialchars($dados['contatoEmail_instituicao']) ?></p>
 
-        <h1>Telefone: </h1>
-        <p><?= htmlspecialchars($dados['contatoTelefone_instituicao']) ?></p>
+            <h1>Telefone: </h1>
+            <p><?= htmlspecialchars($dados['contatoTelefone_instituicao']) ?></p>
 
-        <h1>CNPJ: </h1>
-        <p><?= htmlspecialchars($dados['cnpj_instituicao']) ?></p>
+            <h1>CNPJ: </h1>
+            <p><?= htmlspecialchars($dados['cnpj_instituicao']) ?></p>
 
-        <h1>Descrição: </h1>
-        <p><?= htmlspecialchars($dados['missao_instituicao']) ?></p>
+            <h1>Descrição: </h1>
+            <p><?= htmlspecialchars($dados['missao_instituicao']) ?></p>
+        </div>
     </div>
-</div>
-
 
 </body>
 </html>
