@@ -2,6 +2,7 @@
 require_once ('../Config/Database.php');
 require_once('../Doador/Doador.php');
 session_start(); 
+$_SESSION['nome_doador'] = ':nome_doador';
 if($_POST)
 {
     
@@ -10,10 +11,11 @@ $doador = new Doador($db);
  
     $doador->senhaDoador = $_POST['senhaDoador'];
     $doador->contatoEmail_doador = $_POST['contatoEmail_doador']; 
-        if ($doador->loginDoador()) {
+        if ($doador->loginDoador()) 
+        {
             header("Location: ../HomeDoa.php");
             exit;   
-            }
+        }
 }
 ?>
 

@@ -23,8 +23,9 @@ if ($_POST) {
  
     if ($doador->criarDoador()) 
     {
-    header("Location: ../LoginDoa/Login.php");
-    exit;
+      session_start();
+      header("Location: ../LoginDoa/Login.php");
+      exit;
     }
   
 }
