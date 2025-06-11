@@ -2,15 +2,19 @@
 session_start();
 require_once '../Config/Database.php';
 require_once 'Instituicao.php';
+
 if (!isset($_SESSION['id_instituicao'])) {
     header("Location: ../LoginInst/Login.php");
     exit;
 }
+$id = $_SESSION['id_instituicao'];
+
 $db = (new Database())->getConnection();
 $instituicao = new Instituicao($db);
-$instituicao->id_instituicao = $_SESSION['id_instituicao'];
-$dados = $instituicao->buscarPorId(); 
+$instituicao->id_instituicao = $id;
+$dados = $instituicao->buscarPorId();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
