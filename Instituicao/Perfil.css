@@ -1,54 +1,70 @@
+.topnav {
+  width: 1330px;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 50px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  width: 110px;
+  height: 93px;
+  margin-top: 0;
+}
+
+a {
+  color: #1D3557;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px; 
+  display: inline-block; 
+  white-space: nowrap; 
+}
+
+a:not(:last-child) {
+  margin-right: 35px; 
+}
+
+a {
+  color: #1D3557;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  display: inline-block; 
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #a8cfe2;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: #457b9d;
+  transform: scale(1.05); 
+}
+
+
+
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .topnav {
-    width: 100%;
-    height: 100px;
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    gap: 50px;
-  }
-  
-  .logo {
-    width: 110px;
-    height: 93px;
-    margin-top: 0;
-  }
-  
-  a {
-    color: #1D3557;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 15px;
-    display: inline-block;
-    white-space: nowrap;
-    position: relative;
-    transition: all 0.3s ease;
-  }
-  
-  a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 2px;
-    width: 0%;
-    background-color: #a8cfe2;
-    transition: width 0.3s ease;
-  }
-  
-  a:hover::after {
-    width: 100%;
-  }
-  
-  a:hover {
-    color: #457b9d;
-    transform: scale(1.05);
   }
   
   main {
@@ -142,5 +158,43 @@ body {
     font-family: 'Times New Roman', Times, serif;
     font-weight: lighter;
     margin-left: 2%;
+  }
+  .perfil-container {
+    display: flex;
+    gap: 50px;
+    margin-left: 11%;
+    align-items: flex-start;
+  }
+  
+  .esquerda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+  }
+  
+  .info h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #1D3557;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .info p {
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
   }
   
