@@ -123,6 +123,50 @@ class Instituicao
         return $resultado->execute();
     }
 
+    public function alterarInstituicao() {
+        $query = "UPDATE {$this->table} SET 
+            cnpj_instituicao = :cnpj_instituicao,
+            nomeFantasia_instituicao = :nomeFantasia_instituicao,
+            razaoSocial_instituicao = :razaoSocial_instituicao,
+            missao_instituicao = :missao_instituicao,
+            tipoInstituicao = :tipoInstituicao,
+            areaAtuacao_instituicao = :areaAtuacao_instituicao,
+            contatoEmail_instituicao = :contatoEmail_instituicao,
+            contatoTelefone_instituicao = :contatoTelefone_instituicao,
+            contatoRedeSocial_instituicao = :contatoRedeSocial_instituicao,
+            estado_instituicao = :estado_instituicao,
+            cidade_instituicao = :cidade_instituicao,
+            cep_instituicao = :cep_instituicao,
+            bairro_instituicao = :bairro_instituicao,
+            rua_instituicao = :rua_instituicao,
+            numeroLocal_instituicao = :numeroLocal_instituicao,
+            senhaInstituicao = :senhaInstituicao,
+            confirmarSenhaInstituicao = :confirmarSenhaInstituicao
+            WHERE id_instituicao = :id_instituicao";
+    
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':cnpj_instituicao', $this->cnpj_instituicao);
+        $resultado->bindParam(':nomeFantasia_instituicao', $this->nomeFantasia_instituicao);
+        $resultado->bindParam(':razaoSocial_instituicao', $this->razaoSocial_instituicao);
+        $resultado->bindParam(':missao_instituicao', $this->missao_instituicao);
+        $resultado->bindParam(':tipoInstituicao', $this->tipoInstituicao);
+        $resultado->bindParam(':areaAtuacao_instituicao', $this->areaAtuacao_instituicao);
+        $resultado->bindParam(':contatoEmail_instituicao', $this->contatoEmail_instituicao);
+        $resultado->bindParam(':contatoTelefone_instituicao', $this->contatoTelefone_instituicao);
+        $resultado->bindParam(':contatoRedeSocial_instituicao', $this->contatoRedeSocial_instituicao);
+        $resultado->bindParam(':estado_instituicao', $this->estado_instituicao);
+        $resultado->bindParam(':cidade_instituicao', $this->cidade_instituicao);
+        $resultado->bindParam(':cep_instituicao', $this->cep_instituicao);
+        $resultado->bindParam(':bairro_instituicao', $this->bairro_instituicao);
+        $resultado->bindParam(':rua_instituicao', $this->rua_instituicao);
+        $resultado->bindParam(':numeroLocal_instituicao', $this->numeroLocal_instituicao);
+        $resultado->bindParam(':senhaInstituicao', $this->senhaInstituicao);
+        $resultado->bindParam(':confirmarSenhaInstituicao', $this->confirmarSenhaInstituicao);
+        $resultado->bindParam(':id_instituicao', $this->id_instituicao);
+    
+        return $resultado->execute();
+    }
+    
     
 }
 

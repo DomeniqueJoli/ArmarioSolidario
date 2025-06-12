@@ -60,7 +60,7 @@ $dados = $instituicao->buscarPorId();
                     </form>
 
                     <button onclick="window.location.href='Alterar.php'">Alterar Perfil</button>
-                </div>
+                    </div>
             </div>
 
             <div class="info">
