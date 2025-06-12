@@ -3,7 +3,6 @@ require_once ('../Config/Database.php');
 require_once('../Doador/Doador.php');
 
 session_start(); 
-
 if($_POST)
 {
     
@@ -14,7 +13,7 @@ $doador = new Doador($db);
     $doador->contatoEmail_doador = $_POST['contatoEmail_doador']; 
         if ($doador->loginDoador()) 
         {
-            header("Location: ../HomeDoa.php");
+            header("Location: ../HomeDoa.php ");
             exit;   
         }
 }

@@ -3,7 +3,8 @@ session_start();
 require_once '../Config/Database.php';
 require_once 'Instituicao.php';
 
-if (!isset($_SESSION['id_instituicao'])) {
+if (!isset($_SESSION['id_instituicao'])) 
+{
     header("Location: ../LoginInst/Login.php");
     exit;
 }
