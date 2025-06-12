@@ -1,19 +1,19 @@
 <?php
-require_once('../Config/Database.php');
+require_once ('../Config/Database.php');
 require_once('../Instituicao/Instituicao.php');
-session_start();
-
-if ($_POST) {
-    $db = (new Database())->getConnection();
-    $instituicao = new Instituicao($db);
-
-    $instituicao->senhaInstituicao = $_POST['senhaInstituicao'];
+session_start(); 
+if($_POST)
+{
+    
+$db = (new Database())->getConnection();
+$instituicao = new Instituicao($db);
+ 
     $instituicao->contatoEmail_instituicao = $_POST['contatoEmail_instituicao'];
-
-    if ($instituicao->loginInstituicao()) {
-        header("Location: ../HomeInst.php");
-        exit;
-    }
+    $instituicao->senhaInstituicao = $_POST['senhaInstituicao'];
+        if ($instituicao->loginInstituicao()) {
+            header("Location: ../HomeInst.php");
+            exit;   
+            }
 }
 ?>
 

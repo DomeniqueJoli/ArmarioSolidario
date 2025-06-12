@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArmárioSolidário</title>
     <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styleHomeInst.css">
+    <link rel="stylesheet" href="styleHomeIns.css">
 </head>
 <body>
  
