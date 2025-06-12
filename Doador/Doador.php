@@ -28,7 +28,7 @@ class Doador
 
     public function loginDoador()
     {
-        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador";
+        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador LIMIT 1"  ;
         $resultado  = $this->conn->prepare($query);
         $resultado->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
         $resultado->bindParam(':senhaDoador', $this->senhaDoador);
