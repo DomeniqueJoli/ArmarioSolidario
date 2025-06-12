@@ -1,3 +1,49 @@
+<?php
+require_once('../config/Database.php');
+require_once('../Instituicao/Instituicao.php');
+
+$db = (new Database())->getConnection();
+$instituicao = new Instituicao($db);
+
+$instituicao->id_instituicao = $_GET['id_instituicao'] ?? null;
+if (!$instituicao->id_instituicao) {
+    die('Erro: ID da ação não foi informado.');
+}
+
+$dados = $instituicao->buscarPorId();
+if (!$dados) {
+    die('Erro: Instituicao não encontrada.');
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $resultado->cnpj_instituicao = $_POST['cnpj_instituicao'] ?? '';
+    $resultado->nomeFantasia_instituicao = $_POST['nomeFantasia_instituicao'] ?? '';
+    $resultado->razaoSocial_instituicao = $_POST['razaoSocial_instituicao'] ?? '';
+    $resultado->missao_instituicao = $_POST['missao_instituicao'] ?? '';
+    $resultado->tipoInstituicao = $_POST['tipoInstituicao'] ?? '';
+    $resultado->areaAtuacao_instituicao = $_POST['areaAtuacao_instituicao'] ?? '';
+    $resultado->contatoEmail_instituicao = $_POST['contatoEmail_instituicao'] ?? '';
+    $resultado->contatoTelefone_instituicao = $_POST['contatoTelefone_instituicao'] ?? '';
+    $resultado->contatoRedeSocial_instituicao = $_POST['contatoRedeSocial_instituicao'] ?? '';
+    $resultado->estado_instituicao = $_POST['estado_instituicao'] ?? '';
+    $resultado->cidade_instituicao = $_POST['cidade_instituicao'] ?? '';
+    $resultado->cep_instituicao = $_POST['cep_instituicao'] ?? '';
+    $resultado->bairro_instituicao = $_POST['bairro_instituicao'] ?? '';
+    $resultado->rua_instituicao = $_POST['rua_instituicao'] ?? '';
+    $resultado->numeroLocal_instituicao = $_POST['numeroLocal_instituicao'] ?? '';
+    $resultado->senhaInstituicao = $_POST['senhaInstituicao'] ?? '';
+    $resultado->confirmarSenhaInstituicao = $_POST['confirmarSenhaInstituicao'] ?? '';
+
+    if ($acao->alterarInstituicao()) {
+        header("Location: Listar.php");
+        exit;
+    } else {
+        echo "<p style='color:red;'>Erro ao alterar a instituicao. Tente novamente.</p>";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

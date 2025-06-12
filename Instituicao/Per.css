@@ -189,12 +189,17 @@ body {
   .info p {
     margin: 0 0 15px;
     font-size: 18px;
-    color: #333;
+    color: #457b9d;
   }
   
   .button-group {
     display: flex;
     gap: 20px;
     margin-top: 20px;
+  }
+
+  .fundo p {
+    color: white;
+    margin-left: 30px;
   }
   

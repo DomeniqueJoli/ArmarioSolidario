@@ -79,3 +79,35 @@
     transform: scale(1.05);
   }
   
+  .botao-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .link-doador,
+  .link-instituicao {
+    margin-top: 15px;
+    font-size: 18px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .link-doador {
+    color: #1D3557;
+  }
+  
+  .link-doador:hover {
+    color: #537ab2;
+  }
+  
+  .link-instituicao {
+    color: #BB2825;
+  }
+  
+  .link-instituicao:hover {
+    color: #d85957;
+  }
+  
+  

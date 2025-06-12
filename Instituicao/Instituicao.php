@@ -113,9 +113,17 @@ class Instituicao
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    
+    public function deletarInstituicao() 
+    {
+        $query = "DELETE FROM {$this->table} WHERE id_instituicao = :id_instituicao";
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':id_instituicao', $this->id_instituicao);
+        return $resultado->execute();
+    }
+
     
 }
-
-
 
 ?> 
