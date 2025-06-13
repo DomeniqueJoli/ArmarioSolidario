@@ -45,7 +45,7 @@ $instituicao = new Instituicao($db);
             <input class="ent" type="password" name="senhaInstituicao" required>
             <br>
 
-            <a class="Sen" href="../RecuperarSenhaInst/RecupSenha.php">Esqueci minha senha</a>
+            <a class="Sen" href="RecupSenha.php">Esqueci minha senha</a>
             <br>
 
             <button class="bt">Entrar</button>
