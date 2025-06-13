@@ -49,7 +49,7 @@ if ($_POST) {
 
   <div class="titulo">
     <h1>Cadastro de Instituição</h1>
-    <img src="..\Images/logo.png" alt="" class="logo"> 
+    <img src="../Images/logo.png" alt="" class="logo"> 
   </div>
 
     <div class="top-section">
