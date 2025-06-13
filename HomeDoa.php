@@ -22,13 +22,11 @@
 
     <a href="HomeDoa.php">Home</a>    
 
-    <a href="Açao\Cadastro.php">Procurar Ações</a>
+    <a href="Acoes\Cadastro.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
-    <a href="Açao\Listar.php">Participações</a>
-
     <a href="Peça\Listar.php">Adicionar Peça</a>
+    <a href="Acoes\Listar.php">Participações</a>
     <a href="Instituicao\Listar.php">Instituições</a>
-    <a href="Peça\Listar.php">Peças Criadas</a>
     <a href="Doador\Perfil.php">Perfil</a>
 </div>
 

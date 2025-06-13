@@ -2,6 +2,7 @@
 require_once('../config/Database.php');
 require_once('../Acoes/Acao.php');
 
+session_start();
 if ($_POST) {
   $db = (new Database())->getConnection();
   $acao = new Acao($db);
@@ -14,9 +15,13 @@ if ($_POST) {
   $acao->meta_acao = $_POST['meta_acao'];
   $acao->localFisico_acao = $_POST['localFisico_acao'];
 
-  if ($acao->criarAcao()) {
-    echo "<script>alert('Ação cadastrada com sucesso!'); window.location.href='Acao.php';</script>";
-    exit;
+  if ($acao->criarAcao() && $id_doador == $_SESSION['id_doador']) {
+    echo "<script>alert('Ação cadastrada com sucesso!'); window.location.href='HomeDoa.php';</script>";
+    if ($_SESSION == 'id_doador') {
+      header("Location: HomeDoa.php");
+      exit;
+    }
+
   }
 }
 ?>
