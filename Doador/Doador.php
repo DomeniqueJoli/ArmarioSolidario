@@ -44,6 +44,22 @@ class Doador
         return $resultado->execute();
     }
 
+    public function atualizarSenha() {
+        $query = "UPDATE doador SET senhaDoador = :senhaDoador WHERE id_doador = :id_doador";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':senhaDoador', $this->senhaDoador);
+        $stmt->bindParam(':id_doador', $this->id_doador);
+        return $stmt->execute();
+    }
+
+     public function buscarPorEmail() {
+        $query = "SELECT * FROM doador WHERE contatoEmail_doador = :contatoEmail_doador LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function loginDoador()
     {
         $query = "SELECT id_doador FROM {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador LIMIT 1"  ;
