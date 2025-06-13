@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Alterar Ação</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="st.css" />
+  <link rel="stylesheet" href="styleAlter.css" />
 </head>
 <body>
 
