@@ -1,8 +1,3 @@
-<?php
-session_start();  
-echo "<h3> Bem-vindo</h3>" . $_SESSION['nome_doador'] ;
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 

@@ -26,14 +26,38 @@ class Doador
     $this->conn = $db;
     }
 
+    public function buscarPorId() 
+{
+    $query = "SELECT * FROM {$this->table}   WHERE id_doador = :id_doador
+    LIMIT 1";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_doador', $this->id_doador, PDO::PARAM_INT);
+    $resultado->execute();
+    return $resultado->fetch(PDO::FETCH_ASSOC);
+}
+
+    public function deletarDoador() 
+    {
+        $query = "DELETE FROM {$this->table} WHERE id_doador = :id_doador";
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':id_doador', $this->id_doador);
+        return $resultado->execute();
+    }
+
     public function loginDoador()
     {
-        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador";
+        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador LIMIT 1"  ;
         $resultado  = $this->conn->prepare($query);
         $resultado->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
         $resultado->bindParam(':senhaDoador', $this->senhaDoador);
 
-        return $resultado->execute();
+         if ($resultado->rowCount() > 0) {
+            $row = $resultado->fetch(PDO::FETCH_ASSOC);
+            $_SESSION['id_doador'] = $row['id_doador'];
+            return true;
+        }
+
+        return false;
     }
 
     public function criarDoador()
@@ -62,7 +86,13 @@ class Doador
         $resultado->bindParam('senhaDoador',$this->senhaDoador);
         $resultado->bindParam('confirmarSenhaDoador', $this->confirmarSenhaDoador);
         
-        return $resultado->execute();
+        if ($resultado->execute()) {
+            return true;
+        } else {
+            $error = $resultado->errorInfo();
+            echo "Erro ao cadastrar: " . $error[2];
+            return false;
+        }
     }
 }
 
