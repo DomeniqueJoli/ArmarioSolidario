@@ -1,6 +1,7 @@
 <?php
 require_once ('../Config/Database.php');
 require_once ('Peca.php');
+session_start();
 $db = (new Database())->getConnection();
 $peca = new Peca($db);
 $resultado = $peca->listarPeca();

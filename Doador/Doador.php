@@ -46,23 +46,23 @@ class Doador
 
     public function loginDoador()
     {
-        $query = "SELECT id_doador FROM " . " {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador LIMIT 1"  ;
+        $query = "SELECT id_doador FROM {$this->table} WHERE contatoEmail_doador = :contatoEmail_doador AND senhaDoador = :senhaDoador LIMIT 1"  ;
         $resultado  = $this->conn->prepare($query);
         $resultado->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
         $resultado->bindParam(':senhaDoador', $this->senhaDoador);
+        $resultado->execute();
 
          if ($resultado->rowCount() > 0) {
             $row = $resultado->fetch(PDO::FETCH_ASSOC);
             $_SESSION['id_doador'] = $row['id_doador'];
             return true;
         }
-
         return false;
     }
 
     public function criarDoador()
     {
-        $query = "INSERT INTO " . " {$this->table}
+        $query = "INSERT INTO {$this->table}
         (nome_doador, cpf_doador, descricao_doador, dataNasc_doador, cep_doador, contatoTelefone_doador, contatoEmail_doador, site_doador,
         estado_doador, cidade_doador, bairro_doador, rua_doador, numLocal_doador, senhaDoador, confirmarSenhaDoador)
         VALUES (:nome_doador, :cpf_doador, :descricao_doador, :dataNasc_doador, :cep_doador, :contatoTelefone_doador, :contatoEmail_doador, :site_doador,
