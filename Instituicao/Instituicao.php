@@ -49,6 +49,22 @@ class Instituicao
         return false;
     }
 
+    public function buscarPorEmail() {
+        $query = "SELECT * FROM instituicao WHERE contatoEmail_instituicao = :contatoEmail_instituicao LIMIT 1";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':contatoEmail_instituicao', $this->contatoEmail_instituicao);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+    
+    public function atualizarSenha() {
+        $query = "UPDATE instituicao SET senhaInstituicao = :senhaInstituicao WHERE id_instituicao = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':senhaInstituicao', $this->senhaInstituicao);
+        $stmt->bindParam(':id', $this->id_instituicao);
+        return $stmt->execute();
+    }
+    
 
     public function buscarPorId()
     {

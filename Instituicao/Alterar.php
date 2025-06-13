@@ -20,18 +20,21 @@ if (!$dados) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $instituicao->id_instituicao = $_POST['id_instituicao'] ?? null;
-
     $instituicao->cnpj_instituicao = $_POST['cnpj_instituicao'] ?? '';
-    $instituicao->nome_instituicao = $_POST['nome_instituicao'] ?? '';
-    $instituicao->endereco_instituicao = $_POST['endereco_instituicao'] ?? '';
-    $instituicao->numero_instituicao = $_POST['numero_instituicao'] ?? '';
-    $instituicao->bairro_instituicao = $_POST['bairro_instituicao'] ?? '';
-    $instituicao->cidade_instituicao = $_POST['cidade_instituicao'] ?? '';
+    $instituicao->nomeFantasia_instituicao = $_POST['nomeFantasia_instituicao'] ?? '';
+    $instituicao->razaoSocial_instituicao = $_POST['razaoSocial_instituicao'] ?? '';
+    $instituicao->missao_instituicao = $_POST['missao_instituicao'] ?? '';
+    $instituicao->tipoInstituicao = $_POST['tipoInstituicao'] ?? '';
+    $instituicao->areaAtuacao_instituicao = $_POST['areaAtuacao_instituicao'] ?? '';
     $instituicao->estado_instituicao = $_POST['estado_instituicao'] ?? '';
-    $instituicao->telefone_instituicao = $_POST['telefone_instituicao'] ?? '';
-    $instituicao->email_instituicao = $_POST['email_instituicao'] ?? '';
-    $instituicao->senha_instituicao = $_POST['senha_instituicao'] ?? '';
-
+    $instituicao->cidade_instituicao = $_POST['cidade_instituicao'] ?? '';
+    $instituicao->cep_instituicao = $_POST['cep_instituicao'] ?? '';
+    $instituicao->bairro_instituicao = $_POST['bairro_instituicao'] ?? '';
+    $instituicao->rua_instituicao = $_POST['rua_instituicao'] ?? '';
+    $instituicao->numeroLocal_instituicao = $_POST['numeroLocal_instituicao'] ?? '';
+    $instituicao->contatoTelefone_instituicao = $_POST['contatoTelefone_instituicao'] ?? '';
+    $instituicao->contatoEmail_instituicao = $_POST['contatoEmail_instituicao'] ?? '';
+    
     if ($instituicao->alterarInstituicao()) {
         header("Location: Listar.php");
         exit;
@@ -48,42 +51,100 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Alterar Instituição</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="styleAlter.css">
+  <link rel="stylesheet" href="styleAlt.css">
 </head>
 <body>
-    <h1>Alterar Instituição</h1>
-    <form method="post" action="">
-        <input type="hidden" name="id_instituicao" value="<?= htmlspecialchars($dados['id_instituicao']) ?>">
 
-        <label>CNPJ:</label>
-        <input type="text" name="cnpj_instituicao" value="<?= htmlspecialchars($dados['cnpj_instituicao']) ?>" required><br>
+<form method="post" action="">
 
-        <label>Nome:</label>
-        <input type="text" name="nome_instituicao" value="<?= htmlspecialchars($dados['nome_instituicao']) ?>" required><br>
+    <div class="titulo">
+        <h1>Alterar Instituição</h1>
+        <img src="..\Images/logo.png" alt="" class="logo"> 
+    </div>
 
-        <label>Endereço:</label>
-        <input type="text" name="endereco_instituicao" value="<?= htmlspecialchars($dados['endereco_instituicao']) ?>" required><br>
+    <div class="top-section">
+        <div class="foto-instituicao">Foto Instituição</div>
 
-        <label>Número:</label>
-        <input type="text" name="numero_instituicao" value="<?= htmlspecialchars($dados['numero_instituicao']) ?>" required><br>
+        <div class="dados-basicos">
+            <div>
+                <input type="hidden" name="id_instituicao" value="<?= htmlspecialchars($dados['id_instituicao'] ?? '') ?>">
+                <label>Nome Fantasia:</label>
+                <input type="text" name="nomeFantasia_instituicao" value="<?= htmlspecialchars($dados['nomeFantasia_instituicao'] ?? '') ?>" required><br>
+            </div>
+            <div>
+            <label>CNPJ:</label>
+                <input type="text" name="cnpj_instituicao" value="<?= htmlspecialchars($dados['cnpj_instituicao'] ?? '') ?>" required><br>
+            </div>
+            <div>
+                <label>Razão Social:</label>
+                <input type="text" name="razaoSocial_instituicao" value="<?= htmlspecialchars($dados['razaoSocial_instituicao'] ?? '') ?>" required><br>
+            </div>
+        </div>
+        </div>
 
-        <label>Bairro:</label>
-        <input type="text" name="bairro_instituicao" value="<?= htmlspecialchars($dados['bairro_instituicao']) ?>" required><br>
+        <div class="form-group">
+            <label>Missão / Objetivo</label>
+            <textarea name="missao_instituicao" required><?= htmlspecialchars($dados['missao_instituicao'] ?? '') ?></textarea>
+        </div>
 
-        <label>Cidade:</label>
-        <input type="text" name="cidade_instituicao" value="<?= htmlspecialchars($dados['cidade_instituicao']) ?>" required><br>
 
-        <label>Estado:</label>
-        <input type="text" name="estado_instituicao" value="<?= htmlspecialchars($dados['estado_instituicao']) ?>" required><br>
+        <div class="form-grid">
+        <div class="form-half">
+            <label>Tipo de Instituição:</label>
+            <input type="text" name="tipoInstituicao" value="<?= htmlspecialchars($dados['tipoInstituicao'] ?? '') ?>" required><br>
+        </div>
 
-        <label>Telefone:</label>
-        <input type="text" name="telefone_instituicao" value="<?= htmlspecialchars($dados['telefone_instituicao']) ?>" required><br>
+        <div class="form-half">
+            <label>Area de Atuação:</label>
+            <input type="text" name="areaAtuacao_instituicao" value="<?= htmlspecialchars($dados['areaAtuacao_instituicao'] ?? '') ?>" required><br>
+        </div>
 
-        <label>E-mail:</label>
-        <input type="email" name="email_instituicao" value="<?= htmlspecialchars($dados['email_instituicao']) ?>" required><br>
+        <div class="form-third">
+            <label>Estado</label>
+            <input type="text" name="estado_instituicao" value="<?= htmlspecialchars($dados['estado_instituicao'] ?? '') ?>" required><br>
+        </div>
 
-        <label>Senha:</label>
-        <input type="password" name="senha_instituicao" value="<?= htmlspecialchars($dados['senha_instituicao']) ?>" required><br>
+        <div class="form-third">
+            <label>Cidade</label>
+            <input type="text" name="cidade_instituicao" value="<?= htmlspecialchars($dados['cidade_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+            <label>CEP</label>
+            <input type="text" name="cep_instituicao" value="<?= htmlspecialchars($dados['cep_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+            <label>Bairro</label>
+            <input type="text" name="bairro_instituicao" value="<?= htmlspecialchars($dados['bairro_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+            <label>Rua</label>
+            <input type="text" name="rua_instituicao" value="<?= htmlspecialchars($dados['rua_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+            <label>Número</label>
+            <input type="number" name="numeroLocal_instituicao" value="<?= htmlspecialchars($dados['numeroLocal_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+            <label>Telefone</label>
+            <input type="text" name="contatoTelefone_instituicao" value="<?= htmlspecialchars($dados['contatoTelefone_instituicao'] ?? '') ?>" required><br>
+        </div>
+
+        <div class="form-third">
+        <label>Email</label>
+        <input type="email" name="contatoEmail_instituicao" value="<?= htmlspecialchars($dados['contatoEmail_instituicao'] ?? '') ?>" required><br>
+
+        </div>
+
+        <div class="form-third">
+            <label>Site / Rede social</label>
+            <input type="text" name="tipoInstituicao" value="<?= htmlspecialchars($dados['tipoInstituicao'] ?? '') ?>" required><br>
+        </div>
+</div> 
 
         <button type="submit">Alterar</button>
     </form>

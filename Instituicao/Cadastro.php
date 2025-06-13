@@ -41,7 +41,7 @@ if ($_POST) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Cadastro Instituição</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
-  <link rel="stylesheet" href="styleCds.css">
+  <link rel="stylesheet" href="styleCd.css">
 
 </head>
 <body>
@@ -49,7 +49,7 @@ if ($_POST) {
 
   <div class="titulo">
     <h1>Cadastro de Instituição</h1>
-    <img src="..\Images/logo.png" alt="" class="logo"> 
+    <img src="../Images/logo.png" alt="" class="logo"> 
   </div>
 
     <div class="top-section">

@@ -26,7 +26,7 @@ $doador = new Doador($db);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
     <link rel="stylesheet" href="styleLogin.css">
-    <link rel="icon" href="..\Images/logo.png" type="image/png">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
 
@@ -46,7 +46,7 @@ $doador = new Doador($db);
 <br>
     <input class="ent" type="password" name="senhaDoador" required>
 <br>
-    <a class="Sen" href="..\RecuperarSenhaDoa\RecupSenha.php">Esqueci minha senha</a>
+    <a class="Sen" href="RecupSenha.php">Esqueci minha senha</a>
 <br>
     <button class="bt" >Entrar</button>
     </div>

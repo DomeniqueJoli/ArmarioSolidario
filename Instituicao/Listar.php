@@ -45,21 +45,21 @@ $resultado = $instituicao->listarInstituicao();
             <tbody>
                 <?php foreach ($resultado as $row): ?>
                 <tr>
-                    <td><?= htmlspecialchars($row['nomeFantasia_instituicao']) ?></td>
-                    <td><?= htmlspecialchars($row['tipoInstituicao']) ?></td>
-                    <td><?= htmlspecialchars($row['areaAtuacao_instituicao']) ?></td>
-                    <td><?= htmlspecialchars($row['estado_instituicao']) ?></td>
-                    <td><?= htmlspecialchars($row['cidade_instituicao']) ?></td>
+                    <td><?= htmlspecialchars($row['nomeFantasia_instituicao'] ?? '') ?></td>
+                    <td><?= htmlspecialchars($row['tipoInstituicao'] ?? '') ?></td>
+                    <td><?= htmlspecialchars($row['areaAtuacao_instituicao'] ?? '') ?></td>
+                    <td><?= htmlspecialchars($row['estado_instituicao'] ?? '') ?></td>
+                    <td><?= htmlspecialchars($row['cidade_instituicao'] ?? '') ?></td>
                     <td>
-                        <a href="mailto:<?= htmlspecialchars($row['contatoEmail_instituicao']) ?>">
-                            <?= htmlspecialchars($row['contatoEmail_instituicao']) ?>
+                        <a href="mailto:<?= htmlspecialchars($row['contatoEmail_instituicao'] ?? '') ?>">
+                            <?= htmlspecialchars($row['contatoEmail_instituicao'] ?? '') ?>
                         </a><br>
-                        <a href="tel:<?= htmlspecialchars($row['contatoTelefone_instituicao']) ?>">
-                            <?= htmlspecialchars($row['contatoTelefone_instituicao']) ?>
+                        <a href="tel:<?= htmlspecialchars($row['contatoTelefone_instituicao'] ?? '') ?>">
+                            <?= htmlspecialchars($row['contatoTelefone_instituicao'] ?? '') ?>
                         </a>
                     </td>
                     <td>
-                        <button onclick="window.location.href='../Instituicao/Perfil.php?id=<?= urlencode($row['id_instituicao']) ?>'">Ver Perfil</button>
+                        <button onclick="window.location.href='../Instituicao/Perfil.php?id=<?= urlencode($row['id_instituicao'] ?? '') ?>'">Ver Perfil</button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
