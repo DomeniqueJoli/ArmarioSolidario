@@ -1,7 +1,7 @@
 <?php
 require_once ('../Config/Database.php');
 require_once('Peca.php');
-
+session_start();
 if($_POST)
 {
   $db = (new Database()) ->getConnection();

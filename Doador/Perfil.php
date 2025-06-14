@@ -42,10 +42,10 @@ $dados = $doador->buscarPorId();
     <div class="topnav">
         <img src="../Images/logo.png" alt="Logo" class="logo">
         <a href="../HomeDoa.php">Home</a>
-        <a href="../Peca/Cadastro.php">Adicionar Ação</a>
+        <a href="../Peça/Cadastro.php">Adicionar Peças</a>
+        <a href="../Peça/Listar.php">Suas Peças</a>
         <a href="../Instituicao/Listar.php">Instituições</a>
-        <a href="../Acao/Listar.php">Ações Criadas</a>
-        <a href="../Instituicao/Perfil.php">Perfil</a>
+        <a href="../Doador/Perfil.php">Perfil</a>
     </div>
 
     <main>
@@ -65,7 +65,7 @@ $dados = $doador->buscarPorId();
 
             <div class="info">
                 <h1>Nome:</h1>
-                <p><?= htmlspecialchars($dados['id_doador'] ?? '') ?></p>
+                <p><?= htmlspecialchars($dados['nome_doador'] ?? '') ?></p>
 
                 <h1>Email:</h1>
                 <p><?= htmlspecialchars($dados['contatoEmail_doador'] ?? '') ?></p>
