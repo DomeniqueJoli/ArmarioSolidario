@@ -167,17 +167,3 @@
 body {
   font-size: 18px;
 }
-
-/* Telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-/* Telas menores que 480px (celulares pequenos) */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px;
-  }
-}
