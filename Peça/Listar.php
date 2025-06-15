@@ -23,7 +23,7 @@ $resultado = $peca->listarPeca();
         <img src="../Images/logo.png" alt="Logo" class="logo">
         <a href="../HomeDoa.php">Home</a>
         <a href="../Peça/Cadastro.php">Suas Peça</a>
-        <a href="../Acao/Listar.php">Ações Criadas</a>
+        <a href="../Acoes/Listar.php">Ações Criadas</a>
         <a href="../Doador/Perfil.php">Perfil</a>
     </div>
 

@@ -24,7 +24,7 @@
 
     <a href="Acoes\Cadastro.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
-    <a href="Peça\Listar.php">Adicionar Peça</a>
+    <a href="Peça\Cadastro.php">Adicionar Peça</a>
     <a href="Acoes\Listar.php">Participações</a>
     <a href="Instituicao\Listar.php">Instituições</a>
     <a href="Doador\Perfil.php">Perfil</a>
