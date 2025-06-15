@@ -27,14 +27,14 @@ class Doador
     }
 
     public function buscarPorId() 
-{
-    $query = "SELECT * FROM {$this->table}   WHERE id_doador = :id_doador
-    LIMIT 1";
-    $resultado = $this->conn->prepare($query);
-    $resultado->bindParam(':id_doador', $this->id_doador, PDO::PARAM_INT);
-    $resultado->execute();
-    return $resultado->fetch(PDO::FETCH_ASSOC);
-}
+    {
+        $query = "SELECT * FROM {$this->table}   WHERE id_doador = :id_doador
+        LIMIT 1";
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':id_doador', $this->id_doador, PDO::PARAM_INT);
+        $resultado->execute();
+        return $resultado->fetch(PDO::FETCH_ASSOC);
+    }
 
     public function deletarDoador() 
     {
@@ -74,6 +74,17 @@ class Doador
             return true;
         }
         return false;
+    }
+
+    public function listarDoador() 
+    {
+        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador, cidade_instituicao, contatoEmail_instituicao, contatoTelefone_instituicao
+        FROM $this->table";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function alterarDoador() {
@@ -151,6 +162,7 @@ class Doador
             return false;
         }
     }
+
 }
 
 
