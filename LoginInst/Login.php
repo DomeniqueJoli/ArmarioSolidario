@@ -22,8 +22,8 @@ $instituicao = new Instituicao($db);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Armário Solidário - Login Instituição</title>
-    <link rel="stylesheet" href="styleLogin.css">
+    <title>Armário Solidário</title>
+    <link rel="stylesheet" href="styleLgn.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>

@@ -1,0 +1,184 @@
+.topnav {
+  width: 1330px;
+  height: 100px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 50px; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+  width: 110px;
+  height: 93px;
+  margin-top: 0;
+}
+
+a:not(:last-child) {
+  margin-right: 35px; 
+}
+
+a {
+  color: #1D3557;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 15px;
+  display: inline-block; 
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #a8cfe2;
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+a:hover {
+  color: #457b9d;
+  transform: scale(1.05); 
+}
+
+h6 {
+  font-size: 40px;
+  margin-left: 35%;
+  margin-top: 16%;
+}
+
+h1 {
+  font-size: 70px;
+  margin-left: 35%;
+  margin-top: 1%;
+}
+
+body {
+  background-image: url("Images/fundoHome.png");
+  background-repeat: no-repeat;
+  background-position: center 150px; 
+  background-size: 100% auto;
+  background-attachment: scroll;
+  height: 150vh;
+  width: 100vw;
+}
+
+
+.sobre {
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 200px;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: justify;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1D3557;
+  text-align: center;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1.5s ease both;
+}
+
+.fade-in-down {
+  animation: fadeInUp 1.2s ease both;
+}
+
+@media (max-width: 768px) {
+  h6 {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
+
+
+.typing-wrapper {
+  text-align: center;
+  margin-top: 15%;
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #a8cfe2;
+  max-width: fit-content;
+  margin: 0 auto;
+}
+
+.typing-h6 {
+  font-size: 40px;
+  font-weight: 500;
+  color: #1D3557;
+  animation: typing-h6 3s steps(20, end) forwards, blink 0.7s step-end infinite;
+}
+
+.typing-h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: #1D3557;
+  margin-top: 10px;
+  animation: typing-h1 4s steps(30, end) 1s forwards, blink 0.7s step-end infinite;
+}
+
+@keyframes typing-h6 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-h1 {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.Inst{
+  color: #1D3557;
+}
+
+.Doa{
+  color: #B6312C;
+}
