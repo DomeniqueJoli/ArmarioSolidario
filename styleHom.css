@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
-  gap: 2%; 
+  gap: 1px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -62,7 +62,7 @@ h1 {
   margin-top: 1%;
 }
 
-.img {
+  body {
   background-image: url("Images/fundoHome.png");
   background-repeat: no-repeat;
   background-position: center 150px; 
