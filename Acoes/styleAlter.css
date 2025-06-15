@@ -9,8 +9,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
-  
-  
   .logo {
     width: 110px;
     height: 93px;
@@ -168,7 +166,7 @@
     cursor: pointer;
     display: block;
     margin: 40px auto 0;
-    transition: all 0.8s ease; /* Mais fluido */
+    transition: all 0.8s ease; 
   }
   
   button:hover {

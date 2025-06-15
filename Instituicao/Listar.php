@@ -12,8 +12,8 @@ $resultado = $instituicao->listarInstituicao();
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Armário Solidário - Instituições</title>
-    <link rel="stylesheet" href="styleLi.css" />
+    <title>Armário Solidário</title>
+    <link rel="stylesheet" href="styleList.css" />
     <link rel="icon" href="../Images/logo.png" type="image/png" />
 </head>
 <body>
@@ -58,14 +58,19 @@ $resultado = $instituicao->listarInstituicao();
                             <?= htmlspecialchars($row['contatoTelefone_instituicao'] ?? '') ?>
                         </a>
                     </td>
-                    <td>
-                        <button onclick="window.location.href='../Instituicao/Perfil.php?id=<?= urlencode($row['id_instituicao'] ?? '') ?>'">Ver Perfil</button>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="7" style="text-align: center;">
+                        <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php?id=<?= urlencode($row['id_instituicao'] ?? '') ?>'">
+                            Ver Mais
+                        </button>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
+
         </table>
     </main>
-
 </body>
 </html>

@@ -29,7 +29,7 @@
 
 
     <section class="sobre fade-in-up">
-      <h3>Sobre a iniciativa Armário Solidário</h3>
+      <h3 class="Inst">Sobre a iniciativa Armário Solidário</h3>
       <p>
         O Armário Solidário é uma iniciativa social que tem como missão transformar peças de roupa em bons gestos. Atuamos como uma ponte entre pessoas dispostas a doar e instituições que acolhem
         quem mais precisa, promovendo a solidariedade de forma prática e acessível. Acreditamos que roupas podem aquecer o corpo, mas também são capazes de transmitir dignidade, autoestima e carinho.

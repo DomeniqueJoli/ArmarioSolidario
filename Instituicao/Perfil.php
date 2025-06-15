@@ -33,7 +33,7 @@ $dados = $instituicao->buscarPorId();
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Armário Solidário - Perfil</title>
-    <link rel="stylesheet" href="Per.css" />
+    <link rel="stylesheet" href="Perff.css" />
     <link rel="icon" href="../Images/logo.png" type="image/png" />
 </head>
 <body>
