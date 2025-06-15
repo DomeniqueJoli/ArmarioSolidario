@@ -11,10 +11,10 @@
     <div class="topnav">
         <img src="..\Images\logo.png" alt="Logo" class="logo">
         <a href="..\HomeInst.php">Home</a>
-        <a href="..\Açao\Cadastro.php">Adicionar Ação</a>
+        <a href="..\Acoes\Cadastro.php">Adicionar Ação</a>
         <a href="..\Doador\Listar.php">Doadores</a>
         <a href="..\Instituicao\Listar.php">Instituições</a>
-        <a href="..\Açao\Listar.php">Ações Criadas</a>
+        <a href="..\Acoes\Listar.php">Ações Criadas</a>
         <a href="..\Instituicao\Perfil.php">Perfil</a>
     </div>
 
@@ -42,7 +42,7 @@
                 </tr>
                 <tr class="btn-row">
                     <td colspan="8" style="text-align: center;">
-                        <button class="ver-mais" onclick="window.location.href='../Instituicao/Perfil.php'">Ver mais</button>
+                        <button class="ver-mais" onclick="window.location.href='../Doador/Perfil.php'">Ver mais</button>
                     </td>
                 </tr>
 
