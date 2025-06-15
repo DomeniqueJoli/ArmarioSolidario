@@ -43,8 +43,10 @@
 
 <!-- <div class="">
 <h6>Pequenos Gestos,</h6>
-<h1>Grandes Impactos</h1>
-</div> -->
+<h1>Grandes Impactos</h1> -->
+</div> 
+
+<div class="img"></div>
 
 <div>
 <h3>Sobre a iniciativa Armário solidário</h3>
