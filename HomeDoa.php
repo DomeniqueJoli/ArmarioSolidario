@@ -14,7 +14,7 @@
   <div class="topnav">    
     <img src="Images/logo.png" alt="logo" class="logo"> 
     <a href="HomeDoa.php">Home</a>    
-    <a href="Acoes\Cadastro.php">Procurar Ações</a>
+    <a href="Doador\AcoesDoador\Listar.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
     <a href="Peça\Cadastro.php">Adicionar Peça</a>
     <a href="Acoes\Listar.php">Participações</a>
