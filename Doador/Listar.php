@@ -1,3 +1,12 @@
+<?php
+require_once('../Config/Database.php');
+require_once('Doador.php');
+
+$db = (new Database())->getConnection();
+$doador = new Doador($db);
+$resultado = $doador->listarDoador();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -27,17 +36,17 @@
                     <th>E-mail</th>
                     <th>Estado</th>
                     <th>Cidade</th>
-                    <th>Qtd. Ações Participadas</th>
+                    <th>Doação</th>
                 </tr>
             </thead>
 
             <tbody>
                 <tr>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="email" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="text" class="input"></td>
-                    <td><input type="number" class="input" min="0"></td>
+                    <td><input type="text" placeholder="Nome do Doador" value="<?= htmlspecialchars($row['nome_doador'] ?? '') ?>" class="input" readonly></td>
+                    <td><input type="email" placeholder="Contato de Email" value="<?= htmlspecialchars($row['contatoEmail_doador'] ?? '') ?>" class="input" readonly></td>
+                    <td><input type="text" placeholder="Ex.: RO..." value="<?= htmlspecialchars($row['estado_doador'] ?? '') ?>" class="input" readonly></td>
+                    <td><input type="text" placeholder="Ex.: Ji-Paraná..." value="<?= htmlspecialchars($row['cidade_doador'] ?? '') ?>" class="input" readonly></td>
+                    <!-- <td><input type="text" value="<?= htmlspecialchars($row['descricao_peca'] ?? '') ?>" class="input" min="0" readonly></td> -->
                     <td></td>
                 </tr>
                 <tr class="btn-row">
