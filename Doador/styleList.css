@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   padding-left: 20px;
-  gap: 5%;
+  gap: 3%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   flex-wrap: wrap;
 }

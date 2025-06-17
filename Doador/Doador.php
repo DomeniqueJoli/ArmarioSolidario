@@ -78,8 +78,8 @@ class Doador
 
     public function listarDoador() 
     {
-        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador, cidade_instituicao, contatoEmail_instituicao, contatoTelefone_instituicao
-        FROM $this->table";
+        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador
+        FROM {$this->table}";
 
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
