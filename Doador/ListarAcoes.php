@@ -13,7 +13,7 @@ $resultado = $acao->listarAcao();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armário Solidário</title>
-    <link rel="stylesheet" href="Acoes/styleList.css">
+    <link rel="stylesheet" href="styleList.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
@@ -21,15 +21,11 @@ $resultado = $acao->listarAcao();
     <div class="topnav">
         <img src="..\Images\logo.png" alt="Logo" class="logo">
 
-        <a href="HomeDoa.php">Home</a>    
-        <a href="Doador\ListarAcoes.php">Procurar Ações</a>
+        <a href="HomeDoa.php">Home</a>
+        <a href="Peça\Cadastro.php">Adicionar Peça</a>    
         <a href="Peça\Listar.php">Suas Peças</a>
-        <a href="Peça\Cadastro.php">Adicionar Peça</a>
-        <!-- <a href="Acoes\Listar.php">Participações</a> -->
-
-        <a href="..\Instituicao\Listar.php">Instituições</a>
         <a href="..\Acoes\Listar.php">Ações Criadas</a>
-        <a href="..\Instituicao\Perfil.php">Perfil</a>
+        <a href="..\Doador\Perfil.php">Perfil</a>
      </div>
 
     

@@ -22,8 +22,8 @@ $resultado = $peca->listarPeca();
     <div class="topnav">
         <img src="../Images/logo.png" alt="Logo" class="logo">
         <a href="../HomeDoa.php">Home</a>
-        <a href="../Peça/Cadastro.php">Suas Peça</a>
-        <a href="../Acoes/Listar.php">Ações Criadas</a>
+        <a href="../Peça/Cadastro.php">Adicionar Peças</a>
+        <a href="../Doador/ListarAcoes.php">Ações Criadas</a>
         <a href="../Doador/Perfil.php">Perfil</a>
     </div>
 
@@ -33,6 +33,7 @@ $resultado = $peca->listarPeca();
             <thead>
                 <tr>
                     <th>Tipo</th>
+                    <th>Descrição</th>
                     <th>Estado</th>
                     <th>Data de Compra</th>
                     <th>Faixa Etária</th>
@@ -44,8 +45,8 @@ $resultado = $peca->listarPeca();
             <tbody>
                 <?php while($row = $resultado->fetch(PDO::FETCH_ASSOC)):?>
                 <tr>
-                    <td><input value="<?= $row['descricao_peca'] ?>" type="text" class="input" placeholder="Descreva sua peça" readonly></td>
                     <td><input value="<?= $row['tipo_vestimenta'] ?>" type="text" class="input" placeholder="Ex: Camiseta" readonly></td>
+                    <td><input value="<?= $row['descricao_peca'] ?>" type="text" class="input" placeholder="Descreva sua peça" readonly></td>
                     <td><input value="<?= $row['estado_peca'] ?>" type="text" class="input" placeholder="Novo/Usado" readonly></td>
                     <td><input value="<?= $row['dataCompra_peca'] ?>" type="date" class="input" readonly></td>
                     <td><input value="<?= $row['faixaEtaria_peca'] ?>" type="text" class="input" placeholder="Infantil, Adulto..." readonly></td>
@@ -65,7 +66,7 @@ $resultado = $peca->listarPeca();
                         </div>
                     </td>
                 </tr>
-                <?php endwhile;?>
+                <?php endwhile;?>   
             </tbody>
         </table>
     </main>
