@@ -31,7 +31,7 @@ $resultado = $acao->listarAcao();
     
         <main>
         <h1>Minhas Ações</h1>
-        <table>
+        <table> 
             <thead>
                 <tr>
                     <th>Nome</th>
