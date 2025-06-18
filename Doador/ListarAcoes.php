@@ -13,7 +13,7 @@ $resultado = $acao->listarAcao();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armário Solidário</title>
-    <link rel="stylesheet" href="styleList.css">
+    <link rel="stylesheet" href="styleLst.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
@@ -59,15 +59,9 @@ $resultado = $acao->listarAcao();
             <tr>
                     <td colspan="7" style="text-align: center;">
                         <div class="btn-container" style="display: flex; justify-content: center; gap: 10px;">
-
-                            <form method="get" action="Excluir.php" onsubmit="return confirm('Tem certeza que deseja retirar-se desta ação?');">
+                            <form method="get" action="indexParticipação.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="ex" type="submit">Excluir</button>
-                            </form>
-
-                            <!-- <form method="get" action="Alterar.php">
-                                <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="alt" type="submit">Atualizar</button>
+                                <button class="par" type="submit">Participar</button>
                             </form>
 
                         </div>
