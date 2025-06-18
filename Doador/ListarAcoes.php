@@ -26,8 +26,7 @@ $resultado = $acao->listarAcao();
     <a href="Instituicoes.php">Instituições</a>
     <a href="Perfil.php">Perfil</a>
   </div>
-
-
+  
         <main>
         <h1>Ações</h1>
         <table> 
