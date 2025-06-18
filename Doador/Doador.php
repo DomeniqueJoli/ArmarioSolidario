@@ -79,22 +79,38 @@ class Doador
         return false;
     }
 
-    public function listarDoador() 
-    {
-        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador, id_acao, nome_acao, descricao_peca
-              FROM {$this->table}
-              WHERE nome_doador = :nome_doador 
-              AND contatoEmail_doador = :contatoEmail_doador 
-              AND estado_doador = :estado_doador 
-              AND cidade_doador = :cidade_doador";
+public function listarDoadorSessao() {
+    $query = "SELECT d.*, a.nome_acao, p.descricao_peca
+              FROM doador d
+              LEFT JOIN participacoes p ON d.id_doador = p.id_doador
+              LEFT JOIN acao a ON p.id_acao = a.id_acao
+              WHERE a.nome_acao = :nome_acao
+              AND p.descricao_peca = :descricao_peca";
 
     $stmt = $this->conn->prepare($query);
-    $stmt->bindParam(':nome_doador', $this->nome_doador);
-    $stmt->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
-    $stmt->bindParam(':estado_doador', $this->estado_doador);
-    $stmt->bindParam(':cidade_doador', $this->cidade_doador);
-
+    $stmt->bindParam(':nome_acao', $this->nome_acao);
+    $stmt->bindParam(':descricao_peca', $this->descricao_peca);
+    $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+}
+
+     public function listarDoador() {
+        $query = "SELECT  FROM {$this->table}
+        WHERE id_doador = :id_doador
+        AND nome_doador = :nome_doador
+        AND contatoEmail_doador = :contatoEmail_doador
+        AND estado_doador = :estado_doador 
+        AND cidade_doador = :cidade_doador";
+
+        $resultado = $this->conn->prepare($query);
+        $resultado->bindParam(':id_doador', $this->id_doador);
+        $resultado->bindParam(':nome_doador', $this->nome_doador);
+        $resultado->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
+        $resultado->bindParam(':estado_doador', $this->estado_doador);
+        $resultado->bindParam(':cidade_doador', $this->cidade_doador);
+        $resultado->execute();
+        return $resultado->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function alterarDoador() {

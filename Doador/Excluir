@@ -1,0 +1,9 @@
+<?php
+require_once '../config/Database.php';
+require_once 'Doador.php';
+$db = (new Database())->getConnection();
+$doador = new Doador($db);
+$doador->id_doador = $_GET['id_doador'];
+if ($doador->deletarDoador()) {
+header("Location: ../LoginDoa/Login.php");
+}   

@@ -1,59 +1,13 @@
 <?php
-
-// session_start();
-// require_once('../Config/Database.php');
-// require_once('../Peça/Peca.php');
-// require_once('../Acoes/Acao.php');
-// require_once('../Doador/Doador.php');
-
-// $db = (new Database())->getConnection();
-// $peca = new Peca($db);
-// $acao = new Acao($db);
-// $doador = new Doador($db);
-
-// if (isset($_GET['id_acao'])) {
-//     $acao->id_acao = $_GET['id_acao'];
-//     $acao->nome_acao = $_GET['nome_acao'];
-//     $acao->descricao_acao = $_GET['descricao_acao'];
-//     $acao->dataInicio_acao = $_GET['dataInicio_acao'];
-//     $acao->dataFim_acao = $_GET['dataFim_acao'];
-//     $acao->localFisico_acao = $_GET['localFisico_acao'];
-
-//     $dados = $acao->buscarPorIdParticipacao();
-// }
-
-// if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-
-//     $_SESSION['nome_doador'] = ":nome_doador";
-//     $_SESSION['contatoEmail_doador'] = "contatoEmail_doador";
-//     $_SESSION['estado_doador'] = "estado_doador";
-//     $_SESSION['cidade_doador'] = "Ji-Paraná";
-
-//     $doador->nome_doador = $_SESSION['nome_doador'];
-//     $doador->contatoEmail_doador = $_SESSION['contatoEmail_doador'];
-//     $doador->estado_doador = $_SESSION['estado_doador'];
-//     $doador->cidade_doador = $_SESSION['cidade_doador'];
-//     $doador->inserirParticipante();
-
-//     header('Location: ../Doador/Listar.php');
-//     exit();
-//}
-
-
 session_start();
 require_once('../Config/Database.php');
 require_once('../Peça/Peca.php');
 require_once('../Acoes/Acao.php');
 require_once('../Doador/Doador.php');
-
-$nome_acao = $_SESSION['nome_acao'] ?? '';
-$descricao_acao = $_SESSION['descricao_acao'] ?? '';
-$dataInicio_acao = $_SESSION['dataInicio_acao'] ?? '';
-$dataFim_acao = $_SESSION['dataFim_acao'] ?? '';
-$localFisico_acao = $_SESSION['localFisico_acao'] ?? '';
-$descricao_peca = $_SESSION['descricao_peca'] ?? '';
+require_once('../Participacoes/Participacao.php');
 
 $db = (new Database())->getConnection();
+$participacao = new Participacao($db);
 $peca = new Peca($db);
 $acao = new Acao($db);
 $doador = new Doador($db);
@@ -67,12 +21,19 @@ if (isset($_GET['id_acao'])) {
     $acao->localFisico_acao = $_GET['localFisico_acao'];
 
     $dados = $acao->buscarPorIdParticipacao();
+
+    $nome_acao = $_SESSION['nome_acao'] ?? '';
+    $descricao_acao = $_SESSION['descricao_acao'] ?? '';
+    $dataInicio_acao = $_SESSION['dataInicio_acao'] ?? '';
+    $dataFim_acao = $_SESSION['dataFim_acao'] ?? '';
+    $localFisico_acao = $_SESSION['localFisico_acao'] ?? '';
+    $descricao_peca = $_SESSION['descricao_peca'] ?? '';
 }
 
-// Verifica se o formulário foi submetido
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['salvar_acao'])) {
-        // Salva os dados da ação na sessão
+        
         $_SESSION['nome_acao'] = $_POST['nome_acao'];
         $_SESSION['descricao_acao'] = $_POST['descricao_acao'];
         $_SESSION['dataInicio_acao'] = $_POST['dataInicio_acao'];
@@ -80,13 +41,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['localFisico_acao'] = $_POST['localFisico_acao'];
         $_SESSION['descricao_peca'] = $_POST['descricao_peca'];
 
-        // Salva os dados do doador (por exemplo, pegando da sessão ou de um campo escondido)
-        $_SESSION['nome_doador'] = "nome_doador";  // Exemplo, substitua com os dados reais
-        $_SESSION['contatoEmail_doador'] = "contatoEmail_doador"; // Substitua com dados reais
-        $_SESSION['estado_doador'] = "estado_doador";  // Substitua com dados reais
-        $_SESSION['cidade_doador'] = "cidade_doador";  // Substitua com dados reais
+        
+          $_SESSION['nome_doador'] = ":nome_doador"; 
+          $_SESSION['contatoEmail_doador'] = ":contatoEmail_doador";
+          $_SESSION['estado_doador'] = ":estado_doador"; 
+          $_SESSION['cidade_doador'] = ":cidade_doador";
+        
+        $participacao->id_doador = $_SESSION['id_doador']; 
+        $participacao->id_acao = $_POST['id_acao'];
+        $participacao->descricao_peca = $_POST['descricao_peca'];
+        $participacao->salvar();
+        session_start();
+        $_SESSION['nome_acao'] = $nome_acao;  
+        $_SESSION['descricao_peca'] = $descricao_peca;
 
-        // Redireciona após salvar os dados
+        echo "Agradecemos a doação!";
         header('Location: ../Doador/Listar.php');
         exit();
     }

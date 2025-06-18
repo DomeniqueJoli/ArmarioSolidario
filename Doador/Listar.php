@@ -1,16 +1,27 @@
 <?php
 require_once('../Config/Database.php');
 require_once('Doador.php');
+require_once('../Acoes/Acao.php');
+require_once('../Peça/Peca.php');
 session_start();
+
+if (!isset($_SESSION['nome_acao']) || !isset($_SESSION['descricao_peca'])) {
+    echo "<p style='color:red;'>Nenhuma ação selecionada.</p>";
+    exit;
+}
 
 $db = (new Database())->getConnection();
 $doador = new Doador($db);
 
-$resultado = $doador->listarDoador(); // Retorna array com doadores
+$doador->nome_acao = $_SESSION['nome_acao'] ?? '';
+$doador->descricao_peca = $_SESSION['descricao_peca'] ?? '';
+$resultado = $doador->listarDoadorSessao();
 
-// Pega os dados da sessão (da última participação)
+
 $nome_acao = $_SESSION['nome_acao'] ?? '';
 $descricao_peca = $_SESSION['descricao_peca'] ?? '';
+
+
 ?>
 
 <!DOCTYPE html>
@@ -49,15 +60,12 @@ $descricao_peca = $_SESSION['descricao_peca'] ?? '';
         <tbody>
         <?php foreach ($resultado as $row): ?>
             <tr>
-                <td><input type="text" value="<?= htmlspecialchars($row['nome_doador']) ?>" class="input" readonly></td>
-                <td><input type="email" value="<?= htmlspecialchars($row['contatoEmail_doador']) ?>" class="input" readonly></td>
-                <td><input type="text" value="<?= htmlspecialchars($row['estado_doador']) ?>" class="input" readonly></td>
-                <td><input type="text" value="<?= htmlspecialchars($row['cidade_doador']) ?>" class="input" readonly></td>
-
-                <!-- Ação e peça da sessão -->
-                <td><input type="text" value="<?= htmlspecialchars($nome_acao) ?>" class="input" readonly></td>
-                <td><input type="text" value="<?= htmlspecialchars($descricao_peca) ?>" class="input" readonly></td>
-            </tr>
+                <td><input type="text" value="<?= htmlspecialchars($row['nome_doador'] ?? '') ?>" class="input" readonly></td>
+                <td><input type="email" value="<?= htmlspecialchars($row['contatoEmail_doador'] ?? '') ?>" class="input" readonly></td>
+                <td><input type="text" value="<?= htmlspecialchars($row['estado_doador'] ?? '') ?>" class="input" readonly></td>
+                <td><input type="text" value="<?= htmlspecialchars($row['cidade_doador'] ?? '') ?>" class="input" readonly></td>
+                <td><input type="text" value="<?= htmlspecialchars($row['nome_acao'] ?? '') ?>" class="input" readonly></td>
+                <td><input type="text" value="<?= htmlspecialchars($row['descricao_peca'] ?? '') ?>" class="input" readonly></td>
             <tr class="btn-row">
                 <td colspan="8" style="text-align: center;">
                     <button class="ver-mais" onclick="window.location.href='../Doador/Perfil.php'">Ver mais</button>
