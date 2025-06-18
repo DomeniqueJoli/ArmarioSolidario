@@ -104,7 +104,7 @@ td {
   padding-bottom: 20px;
 }
 
-.ex, .alt {
+.par {
   padding: 12px 690px;
   width: 100%;
   max-width: 800px;
@@ -117,6 +117,13 @@ td {
   transition: background-color 0.3s ease;
   margin-top: 10px;
   color: white;
+}
+.par {
+  background-color: #457b9d;
+}
+
+.par:hover{
+  background-color: #1D3557;
 }
 
 .btn-container {
