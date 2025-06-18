@@ -9,18 +9,19 @@ $peca->descricao_peca = $_POST['descricao_peca'];
 }
 
 require_once('../Acoes/Acao.php');
-  $db = (new Database())->getConnection();
-  $acao = new Acao($db);
- if ($_POST) {
-  $acao->nome_acao = $_POST['nome_acao'];
-  $acao->descricao_acao = $_POST['descricao_acao'];
-  $acao->dataInicio_acao = $_POST['dataInicio_acao']; 
-  $acao->dataFim_acao = $_POST['dataFim_acao'];
-  $acao->localFisico_acao = $_POST['localFisico_acao'];
-  
-  $resultado = $acao->buscarPorIdParticipacao();
-}
+$db = (new Database())->getConnection();  
+$acao = new Acao($db);                    
 
+if (isset($_GET['id_acao'])) {
+    $acao->id_acao = $_GET['id_acao'];
+    $acao->nome_acao = $_GET['nome_acao'];
+    $acao->descricao_acao = $_GET['descricao_acao'];
+    $acao->dataInicio_acao = $_GET['dataInicio_acao'];
+    $acao->dataFim_acao = $_GET['dataFim_acao'];
+    $acao->localFisico_acao = $_GET['localFisico_acao'];
+
+    $dados = $acao->buscarPorIdParticipacao();
+}
 ?>
 
 
@@ -74,11 +75,11 @@ require_once('../Acoes/Acao.php');
     <div class="dados-acao">
       <div>
         <label>Nome da Ação</label>
-        <input type="text" name="nome_acao" value="<?= isset($_POST['nome_acao']) ? htmlspecialchars($_POST['nome_acao']) : '' ?>" required />
+        <input type="text" name="nome_acao"  value="<?= htmlspecialchars($dados['nome_acao'] ?? '') ?>" readonly />
       </div>
       <div class="form-group">
         <label>Descrição da Ação</label>
-        <textarea name="descricao_acao" required><?= isset($_POST['descricao_acao']) ? htmlspecialchars($_POST['descricao_acao']) : '' ?></textarea>
+        <textarea name="descricao_acao" required><?= htmlspecialchars($dados['descricao_acao'] ?? '') ?></textarea>
     </div>
     </div>
   </div>
@@ -86,15 +87,15 @@ require_once('../Acoes/Acao.php');
   <div class="form-grid">
     <div class="form-half">
       <label>Data de Início</label>
-      <input type="date" name="dataInicio_acao" value="<?= isset($_POST['dataInicio_acao']) ? $_POST['dataInicio_acao'] : '' ?>" required />
+      <input type="date" name="dataInicio_acao" value="<?= htmlspecialchars($dados['dataInicio_acao'] ?? '') ?>" required />
     </div>
     <div class="form-half">
       <label>Data de Término</label>
-      <input type="date" name="dataFim_acao" value="<?= isset($_POST['dataFim_acao']) ? $_POST['dataFim_acao'] : '' ?>" required />
+      <input type="date" name="dataFim_acao" value="<?= htmlspecialchars($dados['dataFim_acao'] ?? '') ?>" required />
     </div>
     <div class="form-group">
       <label>Local físico de coleta (opcional)</label>
-      <input type="text" name="localFisico_acao" value="<?= isset($_POST['localFisico_acao']) ? htmlspecialchars($_POST['localFisico_acao']) : '' ?>" />
+      <input type="text" name="localFisico_acao" value="<?= htmlspecialchars($dados['localFisico_acao'] ?? '') ?>" />
     </div>
     <div>
       <label>Peça à ser doada</label>
