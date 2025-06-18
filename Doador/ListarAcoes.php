@@ -13,7 +13,7 @@ $resultado = $acao->listarAcao();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Armário Solidário</title>
-    <link rel="stylesheet" href="styleList.css">
+    <link rel="stylesheet" href="styleLst.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
 </head>
 <body>
@@ -28,7 +28,7 @@ $resultado = $acao->listarAcao();
         <a href="..\Doador\Perfil.php">Perfil</a>
      </div>
 
-    
+
         <main>
         <h1>Ações</h1>
         <table> 
@@ -53,23 +53,19 @@ $resultado = $acao->listarAcao();
                 <td><?= htmlspecialchars($row['qntdBeneficiarios']) ?></td>
                 <td><?= htmlspecialchars($row['meta_acao']) ?></td>
                 <td><?= htmlspecialchars($row['localFisico_acao']) ?></td>
-            
-            </tr>
 
+            </tr>
             <tr>
                     <td colspan="7" style="text-align: center;">
-                        <div class="btn-container" style="display: flex; justify-content: center; gap: 10px;">
-
-                            <form method="get" action="Excluir.php" onsubmit="return confirm('Tem certeza que deseja retirar-se desta ação?');">
+                            <form method="get" action="indexParticipação.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="ex" type="submit">Excluir</button>
+                                <input type="hidden" name="nome_acao" value="<?= htmlspecialchars($row['nome_acao']) ?>">
+                                <input type="hidden" name="descricao_acao" value="<?= htmlspecialchars($row['descricao_acao']) ?>">
+                                <input type="hidden" name="dataInicio_acao" value="<?= htmlspecialchars($row['dataInicio_acao']) ?>">
+                                <input type="hidden" name="dataFim_acao" value="<?= htmlspecialchars($row['dataFim_acao']) ?>">
+                                <input type="hidden" name="localFisico_acao" value="<?= htmlspecialchars($row['localFisico_acao']) ?>">
+                                <button class="par" type="submit">Participar</button>
                             </form>
-
-                            <!-- <form method="get" action="Alterar.php">
-                                <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="alt" type="submit">Atualizar</button>
-                            </form>
-
                         </div>
                     </td>
                 </tr>
@@ -79,4 +75,3 @@ $resultado = $acao->listarAcao();
 </main>
 
 </body>
-</html>
