@@ -67,6 +67,16 @@ public function deletarPeca()
     return $resultado->execute();
 }
 
+public function escolherPeca()
+{
+    $query = "SELECT * FROM {$this->table} WHERE id_peca = :id_peca AND descricao_peca = :descricao_peca";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_peca', $this->id_peca);
+    $resultado->bindParam(':descricao_peca', $this->descricao_peca);
+    $resultado->execute();
+    return $resultado;
+}
+
 public function editarPeca() 
 {
     $query = "UPDATE " . "{$this->table}  
