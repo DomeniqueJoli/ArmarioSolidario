@@ -41,6 +41,15 @@ class Acao
         return $resultado->execute();
     }
 
+    public function nomeAcao()
+    {
+    $query = "SELECT id_acao FROM {$this->table} WHERE nome_acao = :nome_acao";
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':nome_acao', $this->nome_acao); 
+    $resultado->execute();
+    return $resultado;
+    }
+
     public function listarAcao()
     {
         $query = "SELECT * FROM {$this->table}";

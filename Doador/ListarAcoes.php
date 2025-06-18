@@ -2,6 +2,8 @@
 require_once ('../Config/Database.php');
 require_once ('../Acoes/Acao.php');
 
+
+
 $db = (new Database())->getConnection();
 $acao = new Acao($db);
 $resultado = $acao->listarAcao();
@@ -57,6 +59,7 @@ $resultado = $acao->listarAcao();
             </tr>
             <tr>
                     <td colspan="7" style="text-align: center;">
+
                             <form method="get" action="indexParticipação.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
                                 <input type="hidden" name="nome_acao" value="<?= htmlspecialchars($row['nome_acao']) ?>">

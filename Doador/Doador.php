@@ -21,6 +21,9 @@ class Doador
     public $bairro_doador;  
     public $rua_doador;  
     public $numLocal_doador;
+    public $id_acao;
+    public $nome_acao;
+    public $descricao_peca;
     public function __construct($db) 
     {
     $this->conn = $db;
@@ -78,13 +81,20 @@ class Doador
 
     public function listarDoador() 
     {
-        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador
-        FROM {$this->table}";
+        $query = "SELECT id_doador, nome_doador, contatoEmail_doador, estado_doador, cidade_doador, id_acao, nome_acao, descricao_peca
+              FROM {$this->table}
+              WHERE nome_doador = :nome_doador 
+              AND contatoEmail_doador = :contatoEmail_doador 
+              AND estado_doador = :estado_doador 
+              AND cidade_doador = :cidade_doador";
 
-        $stmt = $this->conn->prepare($query);
-        $stmt->execute();
+    $stmt = $this->conn->prepare($query);
+    $stmt->bindParam(':nome_doador', $this->nome_doador);
+    $stmt->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
+    $stmt->bindParam(':estado_doador', $this->estado_doador);
+    $stmt->bindParam(':cidade_doador', $this->cidade_doador);
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function alterarDoador() {
@@ -125,7 +135,22 @@ class Doador
     $resultado->bindParam('confirmarSenhaDoador', $this->confirmarSenhaDoador);
 
     return $resultado->execute();
+    }
 
+    public function inserirParticipante()
+    {
+        $query = "INSERT INTO doador 
+            (nome_doador, contatoEmail_doador, estado_doador, cidade_doador) 
+            VALUES 
+            (:nome_doador, :contatoEmail_doador, :estado_doador, :cidade_doador)";
+        
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':nome_doador', $this->nome_doador);
+        $stmt->bindParam(':contatoEmail_doador', $this->contatoEmail_doador);
+        $stmt->bindParam(':estado_doador', $this->estado_doador);
+        $stmt->bindParam(':cidade_doador', $this->cidade_doador);
+
+        return $stmt->execute();
     }
 
     public function criarDoador()

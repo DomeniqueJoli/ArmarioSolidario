@@ -20,12 +20,13 @@ $resultado = $peca->listarPeca();
     <link rel="stylesheet" href="StylePart.css">
 
     <script>
-        function selecionar(valor) {
-            if (window.opener && !window.opener.closed) {
-                window.opener.receberSelecao(valor); // Envia o dado para a aba principal
-                }
-                window.close(); // Fecha a aba de dados
-                }
+        function selecionar(valor)
+        {
+            const url = new URL(window.opener.location.href);
+            url.searchParams.set('descricao_peca', valor);
+            window.opener.location.href = url.toString();
+            window.close();
+        }
     </script>
 
 </head>
