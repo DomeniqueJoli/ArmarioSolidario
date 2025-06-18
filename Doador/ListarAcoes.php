@@ -30,7 +30,7 @@ $resultado = $acao->listarAcao();
 
     
         <main>
-        <h1>Minhas Ações</h1>
+        <h1>Ações</h1>
         <table> 
             <thead>
                 <tr>
