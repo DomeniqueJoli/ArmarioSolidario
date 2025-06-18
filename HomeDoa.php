@@ -15,7 +15,6 @@
     <a href="Doador\ListarAcoes.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
     <a href="Peça\Cadastro.php">Adicionar Peça</a>
-    <a href="">Participações</a>
     <a href="Doador\Instituicoes.php">Instituições</a>
     <a href="Doador\Perfil.php">Perfil</a>
   </div>

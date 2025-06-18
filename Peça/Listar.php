@@ -18,14 +18,15 @@ $resultado = $peca->listarPeca();
     <link rel="stylesheet" href="../Acoes/styleList.css">
 </head>
 <body>
-
-    <div class="topnav">
-        <img src="../Images/logo.png" alt="Logo" class="logo">
-        <a href="../HomeDoa.php">Home</a>
-        <a href="../Peça/Cadastro.php">Adicionar Peças</a>
-        <a href="../Doador/ListarAcoes.php">Ações Criadas</a>
-        <a href="../Doador/Perfil.php">Perfil</a>
-    </div>
+<div class="topnav">    
+    <img src="../Images/logo.png" alt="logo" class="logo"> 
+    <a href="../HomeDoa.php">Home</a>    
+    <a href="../Doador/ListarAcoes.php">Procurar Ações</a>
+    <a href="Listar.php">Suas Peças</a>
+    <a href="Cadastro.php">Adicionar Peça</a>
+    <a href="../Doador/Instituicoes.php">Instituições</a>
+    <a href="../Doador/Perfil.php">Perfil</a>
+  </div>
 
     <main>  
         <h1>Minhas Peças</h1>

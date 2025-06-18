@@ -35,14 +35,15 @@ if($_POST)
 </head>
 <body>
 
-  <div class="topnav">
-    <img src="../Images/logo.png" alt="Logo" class="logo" />
-    <a href="#">Home</a>
-    <a href="../Ação/">Ver Ações</a>
-    <a href="../Peça/Listar.php">Suas Peças</a>
+<div class="topnav">    
+    <img src="../Images/logo.png" alt="logo" class="logo"> 
+    <a href="../HomeDoa.php">Home</a>    
+    <a href="../Doador/ListarAcoes.php">Procurar Ações</a>
+    <a href="Listar.php">Suas Peças</a>
+    <a href="Cadastro.php">Adicionar Peça</a>
+    <a href="../Doador/Instituicoes.php">Instituições</a>
     <a href="../Doador/Perfil.php">Perfil</a>
   </div>
-
 
   <form method="post">
   <div class="titulo">

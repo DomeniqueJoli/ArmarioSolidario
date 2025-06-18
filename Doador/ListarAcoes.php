@@ -17,16 +17,15 @@ $resultado = $acao->listarAcao();
     <link rel="stylesheet" href="styleLst.css">
 </head>
 <body>
-
-    <div class="topnav">
-        <img src="..\Images\logo.png" alt="Logo" class="logo">
-
-        <a href="..\HomeDoa.php">Home</a>
-        <a href="..\Peça\Cadastro.php">Adicionar Peça</a>    
-        <a href="..\Peça\Listar.php">Suas Peças</a>
-        <a href="..\Acoes\Listar.php">Ações Criadas</a>
-        <a href="..\Doador\Perfil.php">Perfil</a>
-     </div>
+<div class="topnav">    
+    <img src="../Images/logo.png" alt="logo" class="logo"> 
+    <a href="../HomeDoa.php">Home</a>    
+    <a href="ListarAcoes.php">Procurar Ações</a>
+    <a href="../Peça\Listar.php">Suas Peças</a>
+    <a href="../Peça\Cadastro.php">Adicionar Peça</a>
+    <a href="Instituicoes.php">Instituições</a>
+    <a href="Perfil.php">Perfil</a>
+  </div>
 
 
         <main>

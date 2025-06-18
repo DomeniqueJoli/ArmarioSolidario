@@ -45,7 +45,6 @@ $dados = $doador->buscarPorId();
     <a href="ListarAcoes.php">Procurar Ações</a>
     <a href="../Peça\Listar.php">Suas Peças</a>
     <a href="../Peça\Cadastro.php">Adicionar Peça</a>
-    <a href="">Participações</a>
     <a href="Instituicoes.php">Instituições</a>
     <a href="Perfil.php">Perfil</a>
   </div>
