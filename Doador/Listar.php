@@ -15,7 +15,7 @@ $resultado = $doador->listarDoador();
     <meta charset="UTF-8">
     <title>Armário Solidário</title>
     <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styleList.css">
+    <link rel="stylesheet" href="styleLst.css">
 </head>
 <body>
 

@@ -15,14 +15,13 @@ if ($_POST) {
   $acao->meta_acao = $_POST['meta_acao'];
   $acao->localFisico_acao = $_POST['localFisico_acao'];
 
-  if ($acao->criarAcao() && $id_doador == $_SESSION['id_doador']) {
-    echo "<script>alert('Ação cadastrada com sucesso!'); window.location.href='HomeDoa.php';</script>";
-    if ($_SESSION == 'id_doador') {
-      header("Location: HomeDoa.php");
-      exit;
-    }
-
+  if ($acao->criarAcao()) {
+    echo "<script>
+    alert('Ação cadastrada com sucesso!'); window.location.href='../HomeInst.php';
+    </script>";
+    exit;
   }
+  
 }
 ?>
 
@@ -51,7 +50,7 @@ if ($_POST) {
     <form method="post" action="">
   <div class="titulo">
     <h1>Cadastro de Ação</h1>
-    <img src="..\Images/logo.png" alt="" class="logo"> 
+    <img src="../Images/logo.png" alt="" class="logo"> 
   </div>
 
   <div class="top-section">

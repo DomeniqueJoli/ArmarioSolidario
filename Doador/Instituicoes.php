@@ -18,16 +18,6 @@ $resultado = $instituicao->listarInstituicao();
 </head>
 <body>
 
-    <div class="topnav">
-        <img src="..\Images\logo.png" alt="Logo" class="logo" />
-        <a href="..\HomeInst.php">Home</a>
-        <a href="..\Acoes\Cadastro.php">Adicionar Ação</a>
-        <a href="..\Doador\Listar.php">Doadores</a>
-        <a href="..\Instituicao\Listar.php">Instituições</a>
-        <a href="..\Acoes\Listar.php">Ações Criadas</a>
-        <a href="..\Instituicao\Perfil.php">Perfil</a>
-    </div>
-
     <main>
         <h1>Instituições Parceiras</h1>
         <table>

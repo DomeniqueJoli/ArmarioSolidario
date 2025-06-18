@@ -84,7 +84,9 @@ th {
 td {
   padding: 12px;
   vertical-align: middle;
+  text-align: center; 
 }
+
 
 .input,
 .inst-img-input {
