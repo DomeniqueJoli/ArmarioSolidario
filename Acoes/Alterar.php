@@ -4,7 +4,7 @@ require_once('../Acoes/Acao.php');
 
 $db = (new Database())->getConnection();
 $acao = new Acao($db);
-
+ 
 $acao->id_acao = $_GET['id_acao'] ?? null;
 if (!$acao->id_acao) {
     die('Erro: ID da ação não foi informado.');
