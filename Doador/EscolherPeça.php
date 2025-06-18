@@ -73,18 +73,6 @@ $resultado = $peca->listarPeca();
                         </div>
                     </td>
                 </tr>
-                <!-- <tr>
-                    <td colspan="7" style="text-align: center;">
-                        <div class="btn-container">
-                            <a class="ex" href="Excluir.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
-                                Excluir
-                            </a>
-                            <a class="alt" href="Alterar.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Deseja atualizar sua peça?')">
-                                Atualizar
-                            </a>
-                        </div>
-                    </td>
-                </tr> -->
                 <?php endwhile;?>   
             </tbody>
         </table>
