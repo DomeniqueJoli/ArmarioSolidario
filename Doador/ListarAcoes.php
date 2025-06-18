@@ -57,7 +57,6 @@ $resultado = $acao->listarAcao();
             </tr>
             <tr>
                     <td colspan="7" style="text-align: center;">
-<<<<<<< HEAD
                             <form method="get" action="indexParticipação.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
                                 <input type="hidden" name="nome_acao" value="<?= htmlspecialchars($row['nome_acao']) ?>">
@@ -67,14 +66,6 @@ $resultado = $acao->listarAcao();
                                 <input type="hidden" name="localFisico_acao" value="<?= htmlspecialchars($row['localFisico_acao']) ?>">
                                 <button class="par" type="submit">Participar</button>
                             </form>
-=======
-                        <div class="btn-container" style="display: flex; justify-content: center; gap: 10px;">
-                            <form method="get" action="indexParticipação.php">
-                                <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="par" type="submit">Participar</button>
-                            </form>
-
->>>>>>> 6f634ae5708707f9c9c124ae2215a83eb7c1ad13
                         </div>
                     </td>
                 </tr>
