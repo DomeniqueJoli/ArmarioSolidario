@@ -59,14 +59,17 @@ $resultado = $acao->listarAcao();
             <tr>
                     <td colspan="7" style="text-align: center;">
                         <div class="btn-container" style="display: flex; justify-content: center; gap: 10px;">
-                            <form method="get" action="Excluir.php" onsubmit="return confirm('Tem certeza que deseja excluir esta ação?');">
+
+                            <form method="get" action="Excluir.php" onsubmit="return confirm('Tem certeza que deseja retirar-se desta ação?');">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
                                 <button class="ex" type="submit">Excluir</button>
                             </form>
-                            <form method="get" action="Alterar.php">
+
+                            <!-- <form method="get" action="Alterar.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
                                 <button class="alt" type="submit">Atualizar</button>
                             </form>
+
                         </div>
                     </td>
                 </tr>
