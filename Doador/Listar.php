@@ -18,8 +18,13 @@ $descricao_peca = $_SESSION['descricao_peca'] ?? '';
 <head>
     <meta charset="UTF-8">
     <title>Armário Solidário</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="styleLst.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
+=======
+    <link rel="icon" href="Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styleLst.css">
+>>>>>>> 9ee4f51b9ca7ac86dbeff8a172ec3f2036ac18b2
 </head>
 <body>
 

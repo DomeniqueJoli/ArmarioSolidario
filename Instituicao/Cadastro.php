@@ -24,11 +24,15 @@ if ($_POST) {
   $instituicao->contatoEmail_instituicao = $_POST['contatoEmail_instituicao'];
 
 
-    if ($instituicao->criarInstituicao()) 
-    {
-    header("Location: ../LoginInst/Login.php");
+  if ($instituicao->criarInstituicao()) 
+  {
+    echo "<script>
+            alert('Cadastro realizado com sucesso!');
+            window.location.href = '../LoginInst/Login.php';
+          </script>";
     exit;
-    }
+  }
+  
   
 }
 ?>

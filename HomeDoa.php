@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
     <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styleHom.css"/>
+    <link rel="stylesheet" href="styleHome.css"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <div class="topnav">    
     <img src="Images/logo.png" alt="logo" class="logo"> 
     <a href="HomeDoa.php">Home</a>    
     <a href="Doador\ListarAcoes.php">Procurar Ações</a>
     <a href="Peça\Listar.php">Suas Peças</a>
     <a href="Peça\Cadastro.php">Adicionar Peça</a>
-    <a href="Acoes\Listar.php">Participações</a>
-    <a href="Instituicao\Listar.php">Instituições</a>
+    <a href="Doador\Instituicoes.php">Instituições</a>
     <a href="Doador\Perfil.php">Perfil</a>
   </div>
 
@@ -30,7 +28,7 @@
 
 
     <section class="sobre fade-in-up">
-      <h3 class="Inst">Sobre a iniciativa Armário Solidário</h3>
+      <h3 class="Doa">Sobre a iniciativa Armário Solidário</h3>
       <p>
         O Armário Solidário é uma iniciativa social que tem como missão transformar peças de roupa em bons gestos. Atuamos como uma ponte entre pessoas dispostas a doar e instituições que acolhem
         quem mais precisa, promovendo a solidariedade de forma prática e acessível. Acreditamos que roupas podem aquecer o corpo, mas também são capazes de transmitir dignidade, autoestima e carinho.

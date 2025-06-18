@@ -1,6 +1,6 @@
 <?php
 require_once('../Config/Database.php');
-require_once('Instituicao.php');
+require_once('../Instituicao/Instituicao.php');
 
 $db = (new Database())->getConnection();
 $instituicao = new Instituicao($db);
@@ -14,19 +14,19 @@ $resultado = $instituicao->listarInstituicao();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Armário Solidário</title>
     <link rel="icon" href="../Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styleLst.css" />
+    <link rel="stylesheet" href="../Instituicao/styleLst.css" />
 </head>
 <body>
 
-    <div class="topnav">
-        <img src="..\Images\logo.png" alt="Logo" class="logo" />
-        <a href="..\HomeInst.php">Home</a>
-        <a href="..\Acoes\Cadastro.php">Adicionar Ação</a>
-        <a href="..\Doador\Listar.php">Doadores</a>
-        <a href="..\Instituicao\Listar.php">Instituições</a>
-        <a href="..\Acoes\Listar.php">Ações Criadas</a>
-        <a href="..\Instituicao\Perfil.php">Perfil</a>
-    </div>
+<div class="topnav">    
+    <img src="../Images/logo.png" alt="logo" class="logo"> 
+    <a href="../HomeDoa.php">Home</a>    
+    <a href="ListarAcoes.php">Procurar Ações</a>
+    <a href="../Peça\Listar.php">Suas Peças</a>
+    <a href="../Peça\Cadastro.php">Adicionar Peça</a>
+    <a href="Instituicoes.php">Instituições</a>
+    <a href="Perfil.php">Perfil</a>
+  </div>
 
     <main>
         <h1>Instituições Parceiras</h1>

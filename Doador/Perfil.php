@@ -34,20 +34,20 @@ $dados = $doador->buscarPorId();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
-    <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="Per.css">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="Perfil.css">
 </head>
 <body>
 
-    <div class="topnav">
-        <img src="../Images/logo.png" alt="Logo" class="logo">
-        <a href="../HomeDoa.php">Home</a>
-        <a href="../Peça/Cadastro.php">Adicionar Peças</a>
-        <a href="../Peça/Listar.php">Suas Peças</a>
-        <a href="../Instituicao/Listar.php">Instituições</a>
-        <a href="../Doador/Perfil.php">Perfil</a>
-    </div>
-
+<div class="topnav">    
+    <img src="../Images/logo.png" alt="logo" class="logo"> 
+    <a href="../HomeDoa.php">Home</a>    
+    <a href="ListarAcoes.php">Procurar Ações</a>
+    <a href="../Peça\Listar.php">Suas Peças</a>
+    <a href="../Peça\Cadastro.php">Adicionar Peça</a>
+    <a href="Instituicoes.php">Instituições</a>
+    <a href="Perfil.php">Perfil</a>
+  </div>
     <main>
         <div class="perfil-container">
             <div class="esquerda">
@@ -67,22 +67,30 @@ $dados = $doador->buscarPorId();
                 <h1>Nome:</h1>
                 <p><?= htmlspecialchars($dados['nome_doador'] ?? '') ?></p>
 
-                <h1>Email:</h1>
-                <p><?= htmlspecialchars($dados['contatoEmail_doador'] ?? '') ?></p>
+                <h1>CPF:</h1>
+                <p><?= htmlspecialchars($dados['cpf_doador'] ?? '') ?></p>
+
+                <h1>Data de Nascimento:</h1>
+                <p><?= htmlspecialchars($dados['dataNasc_doador'] ?? '') ?></p>
 
                 <h1>Telefone:</h1>
                 <p><?= htmlspecialchars($dados['contatoTelefone_doador'] ?? '') ?></p>
+
+            </div>
+
+            <div class="info">
+                <h1>Email:</h1>
+                <p><?= htmlspecialchars($dados['contatoEmail_doador'] ?? '') ?></p>
+
+                <h1>CEP:</h1>
+                <p><?= htmlspecialchars($dados['cep_doador'] ?? '') ?></p>
+
+                <h1>Descrição:</h1>
+                <p><?= htmlspecialchars($dados['descricao_doador'] ?? '') ?></p>
+
             </div>
         </div>
     </main>
-
-    <div class="background-container">
-        <img src="../Images/fundoHome.png" alt="Fundo Home" class="background-image" />
-        <div class="fundo">
-            <h1>Descrição: </h1>
-            <p><?= htmlspecialchars($dados['descricao_doador']) ?></p>
-        </div>
-    </div>
 
 </body>
 </html>

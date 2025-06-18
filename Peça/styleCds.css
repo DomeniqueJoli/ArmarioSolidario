@@ -1,5 +1,4 @@
 .topnav {
-  /* width: 1330px; */
   height: 100px;
   margin-top: 5px;
   display: flex;
@@ -8,8 +7,6 @@
   gap: 40px; 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-
 
 .logo {
   width: 110px;
@@ -70,22 +67,19 @@ body {
 }
 
 .titulo {
-  margin: 3% auto 2% auto;
+  margin-left: 35%;
+  margin-top: 3%;
+  margin-bottom: 2%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+  align-items: center; 
+  gap: 10px; 
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .titulo img {
   width: 115px;
   height: 105px;
-}
-
-.titulo h1 {
-  font-size: 40px;
-  font-family: sans-serif;
-  font-weight: normal;
 }
 
 form {
