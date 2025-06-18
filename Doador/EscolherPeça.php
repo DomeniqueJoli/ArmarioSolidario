@@ -6,7 +6,6 @@ require_once ('../Peça/Peca.php');
 $db = (new Database())->getConnection();
 $peca = new Peca($db);
 $resultado = $peca->listarPeca();
-// $resultado = $peca->escolherPeca();
 
 ?>
 
@@ -58,8 +57,16 @@ $resultado = $peca->listarPeca();
                     <td><input value="<?= $row['tempoUso_peca'] ?>" type="text" class="input" placeholder="Ex: 1 ano" readonly></td>
                     <td>
                         <div class="btn-container">
-                            <a class="ex" href="Excluir.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
+                            <a class="ex" href="Escolher.php?id_peca=<?= $row['id_peca'] ?>" onclick="selecionar(<?= $row['descricao_peca'] ?>">
                                 Escolher
+                                <script>
+                                    function selecionar(valor) {
+                                    if (window.opener && !window.opener.closed) {
+                                        window.opener.receberSelecao(valor); // Envia o dado para a aba principal
+                                    }
+                                    window.close(); // Fecha a aba de dados
+                                    }
+                                </script>
                         </div>
                     </td>
                 </tr>

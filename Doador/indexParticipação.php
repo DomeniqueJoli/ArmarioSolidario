@@ -1,4 +1,9 @@
+<?php
+require_once('../Config/Database.php');
+require_once('../Peça/Peca.php');
 
+
+?>
 
 
 
@@ -16,7 +21,7 @@
 
     <div class="topnav">
         <img src="..\Images\logo.png" alt="Logo" class="logo">
-        <a href="..\HomeInst.php">Home</a>
+        <a href="..\HomeDoa.php">Home</a>
         <a href="..\Acoes\Cadastro.php">Adicionar Ação</a>
         <a href="..\Doador\Listar.php">Doadores</a>
         <a href="..\Instituicao\Listar.php">Instituições</a>
@@ -58,7 +63,7 @@
       <input type="text" name="localFisico_acao" />
     </div>
     <div>
-      <label>Selecionar peça</label>
+      <label>Peça à ser doada</label>
       <input type="text" name="descricao_peca" readonly>
        <script>
         let abaDados;
@@ -68,8 +73,8 @@
         }
 
         // Essa função pode ser chamada pela outra página
-        function receberSelecao(param) {
-          alert("Você selecionou: " + $param);
+        function receberSelecao(valor) {
+          alert("Você selecionou: " + $valor);
           // Aqui você poderia atualizar algum campo na tela
         }
 

@@ -62,7 +62,7 @@ $resultado = $acao->listarAcao();
 
                             <form method="get" action="Excluir.php" onsubmit="return confirm('Tem certeza que deseja retirar-se desta ação?');">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
-                                <button class="ex" type="submit">Sair</button>
+                                <button class="ex" type="submit">Excluir</button>
                             </form>
 
                             <!-- <form method="get" action="Alterar.php">
