@@ -105,7 +105,7 @@ td {
 }
 
 .ex, .alt {
-  padding: 12px 323px;
+  padding: 12px 690px;
   width: 100%;
   max-width: 800px;
   box-sizing: border-box;
@@ -117,22 +117,6 @@ td {
   transition: background-color 0.3s ease;
   margin-top: 10px;
   color: white;
-}
-
-.ex {
-  background-color: #B6312C;
-}
-
-.ex:hover {
-  background-color: #921d19;
-}
-
-.alt {
-  background-color: #4f0a56;
-}
-
-.alt:hover {
-  background-color: #310536;
 }
 
 .btn-container {

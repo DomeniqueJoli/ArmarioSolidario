@@ -68,7 +68,7 @@ $resultado = $acao->listarAcao();
                             <!-- <form method="get" action="Alterar.php">
                                 <input type="hidden" name="id_acao" value="<?= htmlspecialchars($row['id_acao']) ?>">
                                 <button class="alt" type="submit">Atualizar</button>
-                            </form> -->
+                            </form>
 
                         </div>
                     </td>
