@@ -58,6 +58,29 @@ class Acao
         return $resultado->fetch(PDO::FETCH_ASSOC);
     }
 
+    public function buscarPorIdParticipacao() 
+    {
+        $query = "SELECT * FROM {$this->table} 
+        WHERE id_acao = :id_acao 
+            AND nome_acao = :nome_acao    
+            AND descricao_acao = :descricao_acao 
+            AND dataInicio_acao = :dataInicio_acao
+            AND dataFim_acao = :dataFim_acao
+            AND localFisico_acao = :localFisico_acao 
+            LIMIT 1";
+              
+    $resultado = $this->conn->prepare($query);
+    $resultado->bindParam(':id_acao', $this->id_acao);
+    $resultado->bindParam(':nome_acao', $this->nome_acao);
+    $resultado->bindParam(':descricao_acao', $this->descricao_acao);
+    $resultado->bindParam(':dataInicio_acao', $this->dataInicio_acao);
+    $resultado->bindParam(':dataFim_acao', $this->dataFim_acao);
+    $resultado->bindParam(':localFisico_acao', $this->localFisico_acao);
+    
+    $resultado->execute();
+    return $resultado->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function alterarAcao() {
         $query = "UPDATE {$this->table} SET 
             nome_acao = :nome_acao, 
