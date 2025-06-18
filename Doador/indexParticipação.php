@@ -1,7 +1,25 @@
 <?php
 require_once('../Config/Database.php');
-require_once('../Peça/Peca.php');
 
+require_once('../Peça/Peca.php');
+if ($_POST) {
+$db = (new Database())->getConnection();
+$peca = new Peca($db);
+$peca->descricao_peca = $_POST['descricao_peca'];
+}
+
+require_once('../Acoes/Acao.php');
+  $db = (new Database())->getConnection();
+  $acao = new Acao($db);
+ if ($_POST) {
+  $acao->nome_acao = $_POST['nome_acao'];
+  $acao->descricao_acao = $_POST['descricao_acao'];
+  $acao->dataInicio_acao = $_POST['dataInicio_acao']; 
+  $acao->dataFim_acao = $_POST['dataFim_acao'];
+  $acao->localFisico_acao = $_POST['localFisico_acao'];
+  
+  $resultado = $acao->buscarPorIdParticipacao();
+}
 
 ?>
 
@@ -16,6 +34,22 @@ require_once('../Peça/Peca.php');
   <title>Armário Solidário</title>
   <link rel="icon" href="../Images/logo.png" type="image/png" />
   <link rel="stylesheet" href="../Acoes/styleAlter.css">
+
+  <script>
+          let abaDados;
+
+      function abrirAba()
+      {
+        abaDados = window.open('EscolherPeça.php', '_blank');
+      }
+
+      function receberSelecao(valor)
+      {
+        document.getElementById("descricao_peca").value = valor;
+      }
+      window.receberSelecao = receberSelecao;
+    </script>
+
 </head>
 <body>
 
@@ -40,11 +74,11 @@ require_once('../Peça/Peca.php');
     <div class="dados-acao">
       <div>
         <label>Nome da Ação</label>
-        <input type="text" name="nome_acao" required />
+        <input type="text" name="nome_acao" value="<?= isset($_POST['nome_acao']) ? htmlspecialchars($_POST['nome_acao']) : '' ?>" required />
       </div>
       <div class="form-group">
         <label>Descrição da Ação</label>
-        <textarea name="descricao_acao" required></textarea>
+        <textarea name="descricao_acao" required><?= isset($_POST['descricao_acao']) ? htmlspecialchars($_POST['descricao_acao']) : '' ?></textarea>
     </div>
     </div>
   </div>
@@ -52,35 +86,19 @@ require_once('../Peça/Peca.php');
   <div class="form-grid">
     <div class="form-half">
       <label>Data de Início</label>
-      <input type="date" name="dataInicio_acao" required />
+      <input type="date" name="dataInicio_acao" value="<?= isset($_POST['dataInicio_acao']) ? $_POST['dataInicio_acao'] : '' ?>" required />
     </div>
     <div class="form-half">
       <label>Data de Término</label>
-      <input type="date" name="dataFim_acao" required />
+      <input type="date" name="dataFim_acao" value="<?= isset($_POST['dataFim_acao']) ? $_POST['dataFim_acao'] : '' ?>" required />
     </div>
     <div class="form-group">
       <label>Local físico de coleta (opcional)</label>
-      <input type="text" name="localFisico_acao" />
+      <input type="text" name="localFisico_acao" value="<?= isset($_POST['localFisico_acao']) ? htmlspecialchars($_POST['localFisico_acao']) : '' ?>" />
     </div>
     <div>
       <label>Peça à ser doada</label>
-      <input type="text" name="descricao_peca" readonly>
-       <script>
-        let abaDados;
-
-        function abrirAba() {
-          abaDados = window.open('EscolherPeça.php');
-        }
-
-        // Essa função pode ser chamada pela outra página
-        function receberSelecao(valor) {
-          alert("Você selecionou: " + $valor);
-          // Aqui você poderia atualizar algum campo na tela
-        }
-
-        // Disponibiliza a função para a aba filha (dados.html)
-        window.receberSelecao = receberSelecao;
-      </script>
+      <input type="text" name="descricao_peca" id="descricao_peca" readonly>
         <button onclick="abrirAba()">Selecionar Peça</button>
 
     </div>

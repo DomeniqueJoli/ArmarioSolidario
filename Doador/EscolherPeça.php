@@ -1,6 +1,7 @@
 <?php
 require_once ('../Config/Database.php');
 require_once ('../Peça/Peca.php');
+require_once('../acoes/Acao.php');
 
 // session_start();
 $db = (new Database())->getConnection();
@@ -17,6 +18,16 @@ $resultado = $peca->listarPeca();
     <title>Armário Solidário</title>
     <link rel="stylesheet" href="StylePart.css">
     <link rel="icon" href="../Images/logo.png" type="image/png">
+
+    <script>
+        function selecionar(valor) {
+            if (window.opener && !window.opener.closed) {
+                window.opener.receberSelecao(valor); // Envia o dado para a aba principal
+                }
+                window.close(); // Fecha a aba de dados
+                }
+    </script>
+
 </head>
 <body>
 
@@ -57,16 +68,8 @@ $resultado = $peca->listarPeca();
                     <td><input value="<?= $row['tempoUso_peca'] ?>" type="text" class="input" placeholder="Ex: 1 ano" readonly></td>
                     <td>
                         <div class="btn-container">
-                            <a class="ex" href="Escolher.php?id_peca=<?= $row['id_peca'] ?>" onclick="selecionar(<?= $row['descricao_peca'] ?>">
+                            <a class="ex" onclick="selecionar('<?= addslashes($row['descricao_peca']) ?>')">
                                 Escolher
-                                <script>
-                                    function selecionar(valor) {
-                                    if (window.opener && !window.opener.closed) {
-                                        window.opener.receberSelecao(valor); // Envia o dado para a aba principal
-                                    }
-                                    window.close(); // Fecha a aba de dados
-                                    }
-                                </script>
                         </div>
                     </td>
                 </tr>
