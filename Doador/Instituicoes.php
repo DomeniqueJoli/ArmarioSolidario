@@ -1,6 +1,6 @@
 <?php
 require_once('../Config/Database.php');
-require_once('Instituicao.php');
+require_once('../Instituicao/Instituicao.php');
 
 $db = (new Database())->getConnection();
 $instituicao = new Instituicao($db);
@@ -14,7 +14,7 @@ $resultado = $instituicao->listarInstituicao();
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Armário Solidário</title>
     <link rel="icon" href="../Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="styleLst.css" />
+    <link rel="stylesheet" href="../Instituicao/styleLst.css" />
 </head>
 <body>
 

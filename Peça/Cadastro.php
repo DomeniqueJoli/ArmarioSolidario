@@ -30,8 +30,8 @@ if($_POST)
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Armário Solidário</title>
-  <link rel="icon" href="Images/logo.png" type="image/png">
-  <link rel="stylesheet" href="st2.css" />
+  <link rel="icon" href="../Images/logo.png" type="image/png">
+  <link rel="stylesheet" href="styleCds.css" />
 </head>
 <body>
 
@@ -46,7 +46,7 @@ if($_POST)
 
   <form method="post">
   <div class="titulo">
-    <h1>Cadastro de Peça</h1>
+    <h1 >Cadastro de Peça</h1>
     <img src="../Images/logo.png" alt="Logo" />
   </div>
 

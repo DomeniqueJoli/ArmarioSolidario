@@ -17,7 +17,7 @@ $resultado = $peca->listarPeca();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
     <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="StylePart.css">
+    <link rel="stylesheet" href="styleLst.css">
 
     <script>
         function selecionar(valor) {

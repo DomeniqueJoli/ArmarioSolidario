@@ -14,8 +14,8 @@ $resultado = $peca->listarPeca();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Armário Solidário</title>
-    <link rel="icon" href="Images/logo.png" type="image/png">
-    <link rel="stylesheet" href="sl4.css">
+    <link rel="icon" href="../Images/logo.png" type="image/png">
+    <link rel="stylesheet" href="../Acoes/styleList.css">
 </head>
 <body>
 
@@ -56,14 +56,14 @@ $resultado = $peca->listarPeca();
                 </tr>
                 <tr>
                     <td colspan="7" style="text-align: center;">
-                        <div class="btn-container">
-                            <a class="ex" href="Excluir.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
-                                Excluir
-                            </a>
-                            <a class="alt" href="Alterar.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Deseja atualizar sua peça?')">
-                                Atualizar
-                            </a>
-                        </div>
+                    <div class="btn-container">
+                        <a class="exa" href="Excluir.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Tem certeza que deseja excluir?')">
+                            Excluir
+                        </a>
+                        <a class="alta" href="Alterar.php?id_peca=<?= $row['id_peca'] ?>" onclick="return confirm('Deseja atualizar sua peça?')">
+                            Atualizar
+                        </a>
+                    </div>
                     </td>
                 </tr>
                 <?php endwhile;?>   
